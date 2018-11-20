@@ -1,4 +1,4 @@
-// pages/result/result.js
+// pages/show/show.js
 Page({
 
   /**

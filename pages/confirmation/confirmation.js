@@ -1,4 +1,4 @@
-// pages/comfirmation/confirmation.js
+// pages/confirmation/confirmation.js
 Page({
 
   /**
