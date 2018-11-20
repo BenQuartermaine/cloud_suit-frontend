@@ -1,12 +1,39 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/results/results",
+    "pages/show/show",
+    "pages/confirmation/confirmation",
+    "pages/account/account",
+    "pages/reviews/reviews",
+    "pages/sumbitReview/sumbitReview",
+    "pages/list/list"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "CloudSuite",
     "navigationBarTextStyle":"black"
-  }
+  },
+    "tabBar": {
+      "backgroundColor": "#FFFFFF",
+      "selectedColor": "white",
+      "borderColor": "white",
+      "color": "black",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "iconPath": "images/search.png",
+          "selectedIconPath": "images/search.png",
+          "text": ""
+        },
+        {
+          "pagePath": "pages/account/account",
+          "iconPath": "images/me.png",
+          "selectedIconPath": "images/me.png",
+          "text": ""
+        } 
+      ]
+    }
 }
+
