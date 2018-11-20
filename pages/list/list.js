@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    tempFilePaths: "/images/addimage.png"
   },
 
   /**
@@ -62,5 +62,17 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+  buttonClicked: function() {
+    var page = this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success(res) {
+        const tempFilePaths = res.tempFilePaths;
+        page.setData({tempFilePaths})
+      }
+    }) 
+  },
 })
