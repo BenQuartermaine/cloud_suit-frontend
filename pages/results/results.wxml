@@ -1,2 +1,12 @@
 <!--pages/results/results.wxml-->
-<text>pages/results/results.wxml</text>
+  <view class="search-bar">
+    <input type="text" style='' placeholder="Search..." bindinput="inputEvent"></input>
+  </view>
+
+<view class='card-wrap'>
+  <block wx:for="{{['Restaurant 1','Restaurant 2','Restaurant 3', 'restaurant 4']}}">
+    <view class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+        <view class="card-category">{{item}}</view>
+    </view>
+  </block>
+</view>

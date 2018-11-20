@@ -1,3 +1,25 @@
 <!--index.wxml-->
 
-<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
+<!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button> -->
+
+<form bindtap='bindFormSubmit'>
+  <view class="input-fields">
+    <input type="text" placeholder="Location.." bindinput="inputEvent"></input>
+  </view>
+  <view class="input-fields">
+    <input type="text" placeholder="Dates.." bindinput="inputEvent"></input>
+  </view>
+  <view class="input-fields">
+    <input type="check" placeholder="Category" bindinput="inputEvent"></input>
+  </view>
+</form>
+
+
+<block wx:for="{{['Restaurant 1']}}">
+  <view bindtap='jumpToPage' class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/benquartermaine');">
+      <view class="card-category">{{item}}</view>
+    <view class="card-description">
+      <text>{{item.story}}</text>
+    </view>
+  </view>
+</block>

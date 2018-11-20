@@ -1,2 +1,10 @@
 <!--pages/show/show.wxml-->
-<text>pages/show/show.wxml</text>
+<view class='heading'>
+  <text>Heading</text>
+</view>
+<view>
+  <button class='book-button'>Book</button>
+</view>
+<view>
+  <image>This will be an image slider</image>
+</view>
