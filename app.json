@@ -1,7 +1,14 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/results/results",
+    "pages/result/result",
+    "pages/comfirmation/confirmation",
+    "pages/account/account",
+    "pages/reviews/reviews",
+    "pages/sumbitReview/sumbitReview",
+    "pages/list/list",
+    "pages/confirmList/confirmList"
   ],
   "window":{
     "backgroundTextStyle":"light",
