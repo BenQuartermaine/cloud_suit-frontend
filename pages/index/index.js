@@ -10,6 +10,5 @@ Page({
     let currentUser = Object.assign(user, e.detail.userInfo)
 
     wx.setStorageSync("currentUser", currentUser)
-  }
-
+  },
 })

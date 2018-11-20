@@ -1,25 +1,25 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/account/account",
     "pages/results/results",
     "pages/show/show",
     "pages/confirmation/confirmation",
-    "pages/account/account",
     "pages/reviews/reviews",
     "pages/sumbitReview/sumbitReview",
     "pages/list/list"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#1D1F34",
     "navigationBarTitleText": "CloudSuite",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"white"
   },
     "tabBar": {
       "backgroundColor": "#FFFFFF",
       "selectedColor": "white",
-      "borderColor": "white",
-      "color": "black",
+      "borderColor": "#1D1F34",
+      "color": "#1D1F34",
       "list": [
         {
           "pagePath": "pages/index/index",
@@ -29,10 +29,11 @@
         },
         {
           "pagePath": "pages/account/account",
-          "iconPath": "images/me.png",
-          "selectedIconPath": "images/me.png",
+          "iconPath": "images/menew.png",
+          "selectedIconPath": "images/menew.png",
           "text": ""
         } 
+       
       ]
     }
 }
