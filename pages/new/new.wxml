@@ -17,10 +17,10 @@
   <form bindsubmit="bindFormSubmit">
   
   <view class="section">
-    <input placeholder='enter the model'></input>
-    <input placeholder='add amentities'></input>
-     <input placeholder='enter the model'></input>
-     <input placeholder='add amentities'></input>
+    <input name='model' placeholder='model'></input>
+    <input name='manufactory' placeholder='manufactory'></input>
+    <input name='location' placeholder='parking airport'></input>
+     <input name='capacity_of_passengers' placeholder='Max capacity of passagers'></input>   
   </view> 
 
   <!-- Refer to the Github repository above if you want the complete form -->
