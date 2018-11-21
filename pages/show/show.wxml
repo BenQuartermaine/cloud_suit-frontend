@@ -13,13 +13,15 @@
 
 <!-- Details of jet section, currently only includes description -->
 <view class='details-wrapper'>
-  <view class='description'>Description</view>
+  <view class='details-model'>
+    <text>{{model}}</text>
+  </view>
   <view class='details-price'>
-    <view wx:if="{{description != null}}">{{description}}</view>
-    <view wx:else>Plane owner didn't leave a description, but we're sure its a wild ride!</view>      </view>
+    <text>{{price_jet}}</text>
+  </view>
   <view>
     <view class='amenities'>
-      <text>{{model}}</text>
+      <text>{{description}}</text>
     </view>
   </view>
 </view>

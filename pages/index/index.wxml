@@ -1,40 +1,35 @@
 <!--index.wxml-->
 
-<button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
+<view class="userinfo">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
 
-<!-- <block wx:else> -->
-  <view class="userinfo">
-    <image class="userinfo-avatar" src="{{currentUser.avatarUrl}}" mode="cover"></image>
-    <text class="userinfo-nickname">{{currentUser.nickName}}</text>
+<form bindtap='bindFormSubmit'>
+  <view class="input-fields">
+    <input type="text" placeholder="From?" bindinput="inputEvent"></input>
   </view>
-  
-  <form bindtap='bindFormSubmit'>
-    <view class="input-fields">
-      <input type="text" placeholder="From" bindinput="inputEvent"></input>
+  <view class="input-fields">
+    <input type="text" placeholder="To?" bindinput="inputEvent"></input>
+  </view>
+  <view class="input-fields">
+    <input type="text" placeholder="Dates.." bindinput="inputEvent"></input>
+  </view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker input-fields">
+      Number of passengers: {{array[index]}}
     </view>
-    <view class="input-fields">
-      <input type="text" placeholder="To" bindinput="inputEvent"></input>
-    </view>
-    <view class="input-fields">
-      <input type="text" placeholder="Dates" bindinput="inputEvent"></input>
-    </view>
-    <picker class="picker input-fields" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-      <view>
-        Select # passengers: {{array[index]}}
-      </view>
-    </picker>
-  </form>
+  </picker>
+</form>
 
-  <!-- <view class='card-wrap'>
-    <view wx:for="{{jets}}"
-    wx:for-item="jet"
-    wx:key="jet.id"
-    bindtap="showJet"
-    data-jet="{{jet}}">
-      <view class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://tse4.mm.bing.net/th?id=OIP.4Sf1PpqRrdwvp4tt_HFJFQHaE7&pid=Api');">
-          <view class="card-category">{{jet.model}}</view>
-      </view>
+<view class='card-wrap'>
+  <view wx:for="{{jets}}"
+  wx:for-item="jet"
+  wx:key="jet.id"
+  bindtap="showJet"
+  data-jet="{{jet}}">
+    <view class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://tse4.mm.bing.net/th?id=OIP.4Sf1PpqRrdwvp4tt_HFJFQHaE7&pid=Api');">
+        <view class="card-category">{{jet.model}}</view>
     </view>
   </view>
-</block> -->
-
+</view>

@@ -1,11 +1,9 @@
 <!--pages/account/account.wxml-->
-<button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
-<block wx:else>
- <view class="userinfo">
-    <image class="userinfo-avatar" src="{{currentUser.avatarUrl}}" mode="cover"></image>
-    <text class="userinfo-nickname">{{currentUser.nickName}}</text>
-  </view>
-</block>
+<view class="userinfo">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+
 
 
   <view class="wrapper">
