@@ -6,10 +6,10 @@
 </view>
 
 <view class="addphotos">
-  <view>
+  <view class="background-image">
    <image src='{{tempFilePaths}}' bindtap='buttonClicked'></image> 
   </view>
-  <button class="add" form-type="submit">Add Photos</button>
+  <button class="add" bindtap='buttonClicked'>Add Photos</button>
 </view>
 
   <!--input.wxml-->
@@ -17,14 +17,14 @@
   <form bindsubmit="bindFormSubmit">
   
   <view class="section">
-    <input placeholder='model'></input>
-    <input placeholder='price'></input>
-     <input placeholder='availability'></input>
-     <input placeholder='range of planes'></input>
+    <input class="placeholder" placeholder='model'></input>
+    <input class="placeholder" placeholder='price'></input>
+     <input class="placeholder" placeholder='availability'></input>
+     <input class="placeholder" placeholder='range of planes'></input>
   </view> 
 
   <!-- Refer to the Github repository above if you want the complete form -->
-  <button class="bottom" form-type="submit">Next</button>
+  <button id="bottom">Next</button>
  </form>
  </view>
 

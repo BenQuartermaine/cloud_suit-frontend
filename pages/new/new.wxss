@@ -3,6 +3,7 @@
   border: 2rpx solid black;
  
 }
+
 .details {
  background: #1D1F34;
  color: white;
@@ -12,33 +13,34 @@
   justify-content: center;
 } 
 
-image{
-  height:40rpx;
-  width:60rpx;
+.background-image{
+  height:300rpx;
+  width:100%;
   padding-bottom:40rpx;
+  margin-bottom: 60rpx;
 
 }
 
 button{
-  padding:14rpx 18rpx;
+  padding:16rpx 20rpx;
   background: #872426;
   border-radius: 50rpx;
   color: white;
   font-family: roboto;
   font-size: 13px;
-  margin-bottom: 100rpx;
+  width:33%
 }
 
-/* .add{
-  margin-bottom: 50rpx;
-} */
+ .add{
+  margin-top: 200rpx;
+} 
 .addphotos{
   display: flex;
   align-items: center;
   flex-direction:column;
   width: 100%;
   margin-top: 40rpx;
-  height: 400rpx;
+  height: 750rpx;
 }
 
 .section{
@@ -58,8 +60,17 @@ button{
   margin:20rpx;
 
 }
+ .placeholder{
+  font-size: 12px;
+  width:100%;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
 
 .wrapper{
   text-align: center
 }
-
+#bottom{
+  margin-bottom: 10rpx;
+}
