@@ -7,7 +7,7 @@
 
 <view class="addphotos">
    <image class='background-image' src='{{tempFilePaths}}' bindtap='buttonClicked'></image> 
-  <button class="add" bindtap='buttonClicked'>Add Photos</button>
+  <!-- <button class="add" bindtap='buttonClicked'>Add Photos</button> -->
 </view>
 
   <!--input.wxml-->

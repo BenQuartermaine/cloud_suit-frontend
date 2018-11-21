@@ -30,10 +30,10 @@ button{
   width:33%
 }
 
- .add{
+ /* .add{
   margin-top: 40rpx;
   margin-bottom: 40rpx;
-} 
+}  */
 .addphotos{
   display: flex;
   align-items: center;
@@ -57,6 +57,10 @@ button{
   border-radius: 3px;
   padding: 20rpx;
   margin:20rpx;
+  font-size: 12px; 
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
   
 
 }
@@ -72,5 +76,6 @@ button{
   text-align: center
 }
 #bottom{
+  margin-top:30rpx;
   margin-bottom: 10rpx;
 }
