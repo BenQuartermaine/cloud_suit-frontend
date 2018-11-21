@@ -7,7 +7,7 @@
     <image class="userinfo-avatar" src="{{currentUser.avatarUrl}}" mode="cover"></image>
     <text class="userinfo-nickname">{{currentUser.nickName}}</text>
   </view>
-
+  
   <form bindtap='bindFormSubmit'>
     <view class="input-fields">
       <input type="text" placeholder="From?" bindinput="inputEvent"></input>
@@ -18,11 +18,12 @@
     <view class="input-fields">
       <input type="text" placeholder="Dates.." bindinput="inputEvent"></input>
     </view>
-    <view class="input-fields">
-      <input type="check" placeholder="Passengers" bindinput="inputEvent"></input>
-    </view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker input-fields">
+        Number of passengers: {{array[index]}}
+      </view>
+    </picker>
   </form>
-
 
   <view class='card-wrap'>
     <block wx:for="{{jets}}"
@@ -35,3 +36,4 @@
     </block>
   </view>
 </block>
+
