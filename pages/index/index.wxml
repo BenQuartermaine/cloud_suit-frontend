@@ -1,6 +1,14 @@
 <!--index.wxml-->
 
-<!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button> -->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
 
 <form bindtap='bindFormSubmit'>
   <view class="input-fields">
@@ -18,11 +26,13 @@
 </form>
 
 
-<block wx:for="{{['Restaurant 1']}}">
-  <view bindtap='jumpToPage' class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/benquartermaine');">
-      <view class="card-category">{{item}}</view>
-    <view class="card-description">
-      <text>{{item.story}}</text>
+<view class='card-wrap'>
+  <block wx:for="{{jets}}"
+  wx:for-item="jet"
+  wx:key="jet.id"
+  bindtap="showJet">
+    <view class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+        <view class="card-category">{{jet.model}}</view>
     </view>
-  </view>
-</block>
+  </block>
+</view>
