@@ -3,16 +3,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 50rpx 0rpx 40rpx 0rpx;
 }
 
 .userinfo-avatar {
-  width: 160rpx;
-  height: 128rpx;
-  margin: 20rpx;
+  width: 180rpx;
+  height: 180rpx;
   border-radius: 50%;
 }
 
 .userinfo-nickname {
+  margin-top: 20rpx;
   color: #aaa;
 }
 
@@ -30,33 +31,41 @@
 button {
   margin-top: 40rpx;
   background: #872426;
-  color: #FCFCFC;
+  border-radius: 50px;
+  color: white;
+  padding: 0rpx 60rpx;
+  font-size: 30rpx;
 }
  
-.upcoming, .renter {
- background: #1D1F34;
- color: white;
+.renter {
+background: #1D1F34;
+border-radius: 4px 0px 0px 4px;
+color: white;
+padding: 10rpx 20rpx;
+border: 1px solid #1D1F34;
 }
-.history, .rentee{
-  background: lightgrey;
-  opacity: 0.8;
+.rentee {
+background: #FCFCFC;
+border: 1px solid #1D1F34;
+border-radius: 0px 4px 4px 0px;
+padding: 10rpx 20rpx;
 }
- .row {
-  display: flex;
-  justify-content: center;
-  margin-top: 40rpx;
-  border-radius: 5px;
+.row {
+display: flex;
+justify-content: center;
+margin-top: 40rpx;
+border-radius: 5px;
 } 
 .banner {
   margin-top: 30rpx;
-
+  margin: 20rpx;
 }
 .header{
   font-weight: bold;
   font-size: 50rpx;
 }
-.p {
+.tag-line {
   font-weight: bold;
   font-size: 45rpx;
-  opacity: 0.7;
+  padding: 40rpx;
 }
