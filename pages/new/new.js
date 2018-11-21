@@ -44,8 +44,8 @@ Page({
       data: request,
       success() {
         // set data on index page and show
-        wx.switchTab({
-          url: '/pages/index/index'
+        wx.navigateTo({
+          url: '/pages/show/show'
         });
       }
     });
