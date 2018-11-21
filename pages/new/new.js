@@ -42,10 +42,11 @@ Page({
       url: 'https://cloud-suite.herokuapp.com/api/v1/jets',
       method: 'POST',
       data: request,
-      success() {
+      success(res) {
+        console.log(res)
         // set data on index page and show
-        wx.switchTab({
-          url: '/pages/index/index'
+        wx.navigateTo({
+          url: '/pages/show/show'
         });
       }
     });

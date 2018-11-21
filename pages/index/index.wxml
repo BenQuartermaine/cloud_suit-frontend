@@ -2,7 +2,7 @@
 
 <button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
 
-<block wx:else>
+<!-- <block wx:else> -->
   <view class="userinfo">
     <image class="userinfo-avatar" src="{{currentUser.avatarUrl}}" mode="cover"></image>
     <text class="userinfo-nickname">{{currentUser.nickName}}</text>
@@ -10,22 +10,22 @@
   
   <form bindtap='bindFormSubmit'>
     <view class="input-fields">
-      <input type="text" placeholder="From?" bindinput="inputEvent"></input>
+      <input type="text" placeholder="From" bindinput="inputEvent"></input>
     </view>
     <view class="input-fields">
-      <input type="text" placeholder="To?" bindinput="inputEvent"></input>
+      <input type="text" placeholder="To" bindinput="inputEvent"></input>
     </view>
     <view class="input-fields">
-      <input type="text" placeholder="Dates.." bindinput="inputEvent"></input>
+      <input type="text" placeholder="Dates" bindinput="inputEvent"></input>
     </view>
-    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-      <view class="picker input-fields">
-        Number of passengers: {{array[index]}}
+    <picker class="picker input-fields" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view>
+        Select # passengers: {{array[index]}}
       </view>
     </picker>
   </form>
 
-  <view class='card-wrap'>
+  <!-- <view class='card-wrap'>
     <view wx:for="{{jets}}"
     wx:for-item="jet"
     wx:key="jet.id"
@@ -36,5 +36,5 @@
       </view>
     </view>
   </view>
-</block>
+</block> -->
 

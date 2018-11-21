@@ -1,17 +1,66 @@
 /* pages/show/show.wxss */
 
+
+/* title & book button */
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30rpx 0px;
+}
+.book-button {
+  background: #872426;
+  color: white;
+  border-radius: 50px;
+  width: 140rpx;
+  height: 70rpx;
+  display: inline-flex;
+  align-items: center; 
+  justify-content: center;
+  padding: 5px;
+  float: right;
+  margin-right: 15rpx;
+  font-size: 12px;
+}
+.title {
+  margin-left: 30rpx;
+  font-size: 48rpx;
+  font-weight: bold;
+}
+.image-wrapper image {
+  height: 500rpx;
+  border-radius: 5px;
+}
+.details-price {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  margin: 10rpx;
+  padding: 40rpx;
+  font-size: 30rpx;
+}
+.description {
+  font-weight: bold;
+  font-size: 35rpx;
+  margin-left: 10rpx;
+}
+
+
+
 /* Reviews section */
 .message {
   display: flex;
   align-items: center;
   padding: 20px;
-  border-bottom: 1px solid rgba(220,224,244,0.4);
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 3px; 
+  margin: 10rpx;
 }
 .message:last-child {
   border-bottom: none;
-}
-.message-body {
-  
 }
 .avatar-large {
   border-radius: 50%;
