@@ -1,8 +1,9 @@
 
 <!-- title and book plane button -->
 <view class='header-wrapper'>
+  <text class='title'wx:if="{{model}}">{{model}}</text>
+  <text class='title'wx:else>Gulfstream G650</text>
   <button class='book-button'>Book</button>
-  <text class='title'>{{model}}</text>
 </view>
 
 <!-- Image carousel -->
@@ -10,7 +11,7 @@
   <image src="http://buzzghana.com/wp-content/uploads/2013/12/Airbus-319-Corporate-Jet-Owner-Vijay-Mallya-2.jpg"></image>
 </view>
 
-<!-- Details of jet section -->
+<!-- Details of jet section, currently only includes description -->
 <view class='details-wrapper'>
   <view class='details-model'>
     <text>{{model}}</text>
@@ -25,17 +26,28 @@
   </view>
 </view>
 
-<!-- Reviews render -->
-<view class='reviews-header'>Reviews</view>
+<!-- Reviews render———This is hard coded at the moment. Needs to be changed to dynamic-->
+
+  <view class='description'>Reviews</view>
 <view class="message">
-  <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan"></image>
+  <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/benquartermaine"></image>
   <view class='body-wrapper'>
     <view class="message-name">
-      <text class='name-date'>Gab Dehan  |  10/07/17</text>
-      <text>This was a great jet to ride in. WIll show to all my friends</text> 
+      <text class='name-date'>Gab Dehan | 2 months ago</text>
+      <view wx:if="{{reviews.content}}">{{reviews.content}}</view> 
+      <view wx:else>Sooo much CAVIAR.</view>
     </view>
   </view>
 </view>
-
+<view class="message">
+  <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/yeehenchen"></image>
+  <view class='body-wrapper'>
+    <view class="message-name">
+      <text class='name-date'>Gab Dehan | 2 months ago</text>
+      <view wx:if="{{reviews.content}}">{{reviews.content}}</view> 
+      <view wx:else>Sooo much CAVIAR.</view>
+    </view>
+  </view>
+</view>
 
 
