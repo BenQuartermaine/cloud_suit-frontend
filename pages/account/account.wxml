@@ -7,24 +7,29 @@
   </view>
 </block>
 
-<view class="wrapper">
- <view class="row">
-   <view class="renter">My Planes</view>
-   <view class="rentee">My Trips</view>
- </view>
-  <button bindtap="buttonLink">List My Plane</button>
+
+  <view class="wrapper">
+  <view class="row">
+    <view class="renter">My Planes</view>
+    <view class="rentee">My Trips</view>
+  </view>
+  
  <!-- <view class="row">
    <view class="upcoming">Upcoming</view>
    <view class="history">History</view>
  </view> -->
- <view class="banner">
-<image src="../../images/sky2.jpg">
-</image>
 
+
+  <text class="tag-line">Your Personal Suite in the Air</text>
+
+    <button bindtap="buttonLink">List</button>
+  <!-- <view class="row">
+    <view class="upcoming">Upcoming</view>
+    <view class="history">History</view>
+  </view> -->
+  <view class="banner">
+  <!-- <image src="../../images/sky2.jpg"> -->
+  <!-- </image> -->
  </view>
-<text class="p">Your Personal Suite in the Air</text>
-
-
-
 </view>
 
