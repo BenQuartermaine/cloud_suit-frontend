@@ -11,7 +11,7 @@ Page({
     let that = this;
 
     wx.request({
-      url: "https://cloud-suite.herokuapp.com/api/v1/jets",
+      url: 'https://cloud-suite.herokuapp.com/api/v1/jets',
       method: 'GET',
       success(res) {
         console.log(res)
