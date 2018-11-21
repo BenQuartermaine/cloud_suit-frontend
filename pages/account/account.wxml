@@ -7,13 +7,20 @@
   </view>
 </block>
 
+
   <view class="wrapper">
   <view class="row">
     <view class="renter">My Planes</view>
     <view class="rentee">My Trips</view>
   </view>
+  
+ <!-- <view class="row">
+   <view class="upcoming">Upcoming</view>
+   <view class="history">History</view>
+ </view> -->
 
-<text class="tag-line">Your Personal Suite in the Air</text>
+
+  <text class="tag-line">Your Personal Suite in the Air</text>
 
     <button bindtap="buttonLink">List</button>
   <!-- <view class="row">

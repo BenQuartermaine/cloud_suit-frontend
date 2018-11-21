@@ -46,7 +46,7 @@ Page({
         console.log(res)
         // set data on index page and show
         wx.navigateTo({
-          url: '/pages/show/show'
+          url: `/pages/show/show?id=${res.data.id}`
         });
       }
     });
