@@ -6,10 +6,8 @@
 </view>
 
 <view class="addphotos">
-  <view class="background-image">
-   <image src='{{tempFilePaths}}' bindtap='buttonClicked'></image> 
-  </view>
-  <button class="add" bindtap='buttonClicked'>Add Photos</button>
+   <image class='background-image' src='{{tempFilePaths}}' bindtap='buttonClicked'></image> 
+  <!-- <button class="add" bindtap='buttonClicked'>Add Photos</button> -->
 </view>
 
   <!--input.wxml-->
@@ -17,7 +15,6 @@
   <form bindsubmit="bindFormSubmit">
   
   <view class="section">
-
     <input name='model' placeholder='model'></input>
     <input name='manufactory' placeholder='manufactory'></input>
     <input name='location' placeholder='parking airport'></input>

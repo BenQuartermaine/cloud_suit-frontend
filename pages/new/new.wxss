@@ -11,13 +11,12 @@
  .row {
   display: flex;
   justify-content: center;
+  margin-top: 40rpx;
 } 
 
 .background-image{
-  height:300rpx;
-  width:100%;
-  padding-bottom:40rpx;
-  margin-bottom: 60rpx;
+  height:500rpx;
+  width: 750rpx;
 
 }
 
@@ -31,16 +30,16 @@ button{
   width:33%
 }
 
- .add{
-  margin-top: 200rpx;
-} 
+ /* .add{
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+}  */
 .addphotos{
   display: flex;
   align-items: center;
   flex-direction:column;
   width: 100%;
   margin-top: 40rpx;
-  height: 750rpx;
 }
 
 .section{
@@ -58,6 +57,11 @@ button{
   border-radius: 3px;
   padding: 20rpx;
   margin:20rpx;
+  font-size: 12px; 
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  
 
 }
  .placeholder{
@@ -72,5 +76,6 @@ button{
   text-align: center
 }
 #bottom{
+  margin-top:30rpx;
   margin-bottom: 10rpx;
 }
