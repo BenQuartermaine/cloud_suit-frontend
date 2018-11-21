@@ -1,14 +1,17 @@
-// pages/index/index.js
+//index.js
+//获取应用实例
+
 Page({
   data: {
-   array: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    hasUserInfo: false,
+    array: [1, 2, 3, 4, 5, 6, 7, 8, 9]
   },
-  
+
   onLoad: function (options) {
     let that = this;
 
     wx.request({
-      url: 'https://cloud-suite.herokuapp.com/api/v1/jets',
+      url: "https://cloud-suite.herokuapp.com/api/v1/jets",
       method: 'GET',
       success(res) {
         console.log(res)
@@ -17,6 +20,7 @@ Page({
           jets
         )
       }
+
     })
   },
   
@@ -42,5 +46,14 @@ Page({
       url: "../index/index"
     });
   },
-})
+  
+  showJet(e) {
+    console.log(e)
+    const data = e.currentTarget.dataset;
+    const jet = data.jet;
 
+    wx.navigateTo({
+      url: `../show/show?id=${jet.id}`
+    });
+  }
+})

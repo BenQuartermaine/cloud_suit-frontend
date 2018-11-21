@@ -26,14 +26,15 @@
   </form>
 
   <view class='card-wrap'>
-    <block wx:for="{{jets}}"
+    <view wx:for="{{jets}}"
     wx:for-item="jet"
     wx:key="jet.id"
-    bindtap="showJet">
+    bindtap="showJet"
+    data-jet="{{jet}}">
       <view class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
           <view class="card-category">{{jet.model}}</view>
       </view>
-    </block>
+    </view>
   </view>
 </block>
 
