@@ -12,7 +12,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let that = this
+    wx.request({
+      url: `https://cloud-suite.herokuapp.com/api/v1/jets/${options.id}`,
+      method: "GET",
+      success(res) {
+        console.log(res)
+        const jet = res.data
+        that.setData(
+          jet
+        )
+      }
+    })
+    console.log(this.data.jet)
   },
 
   /**
