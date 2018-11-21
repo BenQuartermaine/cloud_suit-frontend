@@ -26,7 +26,6 @@ Page({
       index: e.detail.value
     })
   },
-  
   //事件处理函数
   getUserInfo: function (e) {
     // update local storage with user info
