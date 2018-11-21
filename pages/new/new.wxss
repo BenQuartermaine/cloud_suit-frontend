@@ -1,12 +1,17 @@
 /* pages/list/list.wxss */
 .details, .confirm{
-  border: 2rpx solid black;
- 
-}
+  width:200rpx;
+  height: 60rpx;
+} 
 
 .details {
  background: #1D1F34;
  color: white;
+}
+
+.confirm{
+  background: lightgrey;
+  opacity: 0.8;
 }
  .row {
   display: flex;

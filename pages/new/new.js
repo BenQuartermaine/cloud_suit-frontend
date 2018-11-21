@@ -43,9 +43,10 @@ Page({
       method: 'POST',
       data: request,
       success() {
+        console.log("sdds")
         // set data on index page and show
-        wx.switchTab({
-          url: '/pages/index/index'
+        wx.redirectTo({
+          url: '/pages/show/show'
         });
       }
     });

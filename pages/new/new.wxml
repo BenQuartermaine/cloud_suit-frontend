@@ -18,12 +18,12 @@
     <input name='model' placeholder='model'></input>
     <input name='manufactory' placeholder='manufactory'></input>
     <input name='location' placeholder='parking airport'></input>
-    <input name='capacity_of_passengers' placeholder='Max capacity of passagers'></input>   
+    <input name='capacity_of_passengers' placeholder='capacity'></input>   
 
   </view> 
 
   <!-- Refer to the Github repository above if you want the complete form -->
-  <button id="bottom">Next</button>
+  <button id="bottom">Submit</button>
  </form>
  </view>
 
