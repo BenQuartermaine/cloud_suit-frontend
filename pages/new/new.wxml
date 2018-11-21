@@ -17,7 +17,7 @@
   <view class="section">
     <input class="placeholder" placeholder='model'></input>
     <input class="placeholder" placeholder='price'></input>
-     <input class="placeholder" placeholder='availability'></input>
+     <input class="placeholder" placeholder='date'></input>
      <input class="placeholder" placeholder='range of planes'></input>
   </view> 
 

@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tempFilePaths: "/images/addimage.png"
+    tempFilePaths: "/images/upload.png"
     
   },
 

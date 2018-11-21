@@ -11,6 +11,7 @@
  .row {
   display: flex;
   justify-content: center;
+  margin-top: 40rpx;
 } 
 
 .background-image{
@@ -18,7 +19,6 @@
   width: 750rpx;
 
 }
-
 
 button{
   padding:16rpx 20rpx;
@@ -31,7 +31,8 @@ button{
 }
 
  .add{
-  margin-top: 20rpx;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
 } 
 .addphotos{
   display: flex;
@@ -56,6 +57,7 @@ button{
   border-radius: 3px;
   padding: 20rpx;
   margin:20rpx;
+  
 
 }
  .placeholder{
