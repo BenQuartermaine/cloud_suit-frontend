@@ -36,12 +36,42 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
 					"name": "login page",
-					"pathName": "pages/index/index"
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index page",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "show page",
+					"pathName": "pages/show/show",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "results page",
+					"pathName": "pages/results/results",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "List",
+					"pathName": "pages/list/list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "New",
+					"pathName": "pages/new/new"
 				}
 			]
 		}

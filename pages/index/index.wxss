@@ -1,1 +1,71 @@
+<<<<<<< HEAD
 /* pages/index/index.wxss */
+=======
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+/**Card styling**/
+.card {
+  height: 140px;
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+  margin: 10px;
+  align-content: center;
+}
+.card-user {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.card-category {
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.card-description {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+.card-link:hover {
+  opacity: 0.1;
+}
+
+/**Search bar styling**/
+.input-fields {
+  display: flex;
+  margin: 6px auto;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  width: 229px;
+  height: 32px;
+}
+.input-fields input {
+  position: relative;
+  top: 5px;
+  left: 10px;
+}
+>>>>>>> fe7f71f521ca441b0cf3e3a37d7d7b9391005466

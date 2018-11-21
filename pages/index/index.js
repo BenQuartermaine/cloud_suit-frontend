@@ -1,5 +1,6 @@
 // pages/index/index.js
 Page({
+<<<<<<< HEAD
 
   /**
    * 页面的初始数据
@@ -64,3 +65,20 @@ Page({
   
   }
 })
+=======
+  data: {},
+  //事件处理函数
+  getUserInfo: function (e) {
+    console.log(e)
+    let user = wx.getStorageSync("currentUser")
+    let currentUser = Object.assign(user, e.detail.userInfo)
+
+    wx.setStorageSync("currentUser", currentUser)
+  },
+  jumpToPage: function () {
+    wx.navigateTo({
+      url: "../results/results"
+    });
+  }
+})
+>>>>>>> fe7f71f521ca441b0cf3e3a37d7d7b9391005466
