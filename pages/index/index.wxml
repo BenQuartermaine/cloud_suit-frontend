@@ -1,38 +1,37 @@
 <!--index.wxml-->
 
-<view class="container">
+<button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
+
+<block wx:else>
   <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <image class="userinfo-avatar" src="{{currentUser.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{currentUser.nickName}}</text>
+  </view>
+
+  <form bindtap='bindFormSubmit'>
+    <view class="input-fields">
+      <input type="text" placeholder="From?" bindinput="inputEvent"></input>
+    </view>
+    <view class="input-fields">
+      <input type="text" placeholder="To?" bindinput="inputEvent"></input>
+    </view>
+    <view class="input-fields">
+      <input type="text" placeholder="Dates.." bindinput="inputEvent"></input>
+    </view>
+    <view class="input-fields">
+      <input type="check" placeholder="Passengers" bindinput="inputEvent"></input>
+    </view>
+  </form>
+
+
+  <view class='card-wrap'>
+    <block wx:for="{{jets}}"
+    wx:for-item="jet"
+    wx:key="jet.id"
+    bindtap="showJet">
+      <view class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+          <view class="card-category">{{jet.model}}</view>
+      </view>
     </block>
   </view>
-</view>
-
-<form bindtap='bindFormSubmit'>
-  <view class="input-fields">
-    <input type="text" placeholder="From?" bindinput="inputEvent"></input>
-  </view>
-  <view class="input-fields">
-    <input type="text" placeholder="To?" bindinput="inputEvent"></input>
-  </view>
-  <view class="input-fields">
-    <input type="text" placeholder="Dates.." bindinput="inputEvent"></input>
-  </view>
-  <view class="input-fields">
-    <input type="check" placeholder="Passengers" bindinput="inputEvent"></input>
-  </view>
-</form>
-
-
-<view class='card-wrap'>
-  <block wx:for="{{jets}}"
-  wx:for-item="jet"
-  wx:key="jet.id"
-  bindtap="showJet">
-    <view class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-        <view class="card-category">{{jet.model}}</view>
-    </view>
-  </block>
-</view>
+</block>

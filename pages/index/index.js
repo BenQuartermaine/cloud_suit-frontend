@@ -25,11 +25,14 @@ Page({
     let user = wx.getStorageSync("currentUser")
     let currentUser = Object.assign(user, e.detail.userInfo)
 
+    this.setData({
+      currentUser: currentUser,
+      hasUserInfo: true
+    })
+
     wx.setStorageSync("currentUser", currentUser)
-  },
-  jumpToPage: function () {
-    wx.navigateTo({
-      url: "../results/results"
+    wx.switchTab({
+      url: "../index/index"
     });
-  }
+  },
 })
