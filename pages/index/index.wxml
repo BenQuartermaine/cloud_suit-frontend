@@ -1,3 +1,2 @@
-<!--index.wxml-->
-
-<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
+<!--pages/index/index.wxml-->
+<text>pages/index/index.wxml</text>
