@@ -49,7 +49,7 @@
   opacity: 0.1;
 }
 
-/**Search bar styling**/
+/**input fields styling**/
 .input-fields {
   display: flex;
   margin: 6px auto;
@@ -59,7 +59,12 @@
   border-radius: 3px;
   width: 229px;
   height: 32px;
+  color: #C1C1C1;
 }
+.picker {
+  height: auto 0px;
+
+} 
 .input-fields input {
   position: relative;
   top: 5px;

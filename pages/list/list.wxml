@@ -19,8 +19,8 @@
   <view class="section">
     <input placeholder='enter the model'></input>
     <input placeholder='add amentities'></input>
-     <input placeholder='enter the model'></input>
-     <input placeholder='add amentities'></input>
+    <input placeholder='enter the model'></input>
+    <input placeholder='add amentities'></input>
   </view> 
 
   <!-- Refer to the Github repository above if you want the complete form -->

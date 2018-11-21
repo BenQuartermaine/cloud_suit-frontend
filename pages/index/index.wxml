@@ -12,10 +12,15 @@
   <view class="input-fields">
     <input type="text" placeholder="Dates.." bindinput="inputEvent"></input>
   </view>
-  <view class="input-fields">
-    <input type="check" placeholder="Passengers" bindinput="inputEvent"></input>
-  </view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker input-fields">
+      Number of passengers: {{array[index]}}
+    </view>
+  </picker>
 </form>
+
+
+
 
 
 <block wx:for="{{['Restaurant 1']}}">
