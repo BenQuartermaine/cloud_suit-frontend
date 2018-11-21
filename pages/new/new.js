@@ -6,6 +6,7 @@ Page({
    */
   data: {
     tempFilePaths: "/images/addimage.png"
+    
   },
 
   buttonClicked: function () {

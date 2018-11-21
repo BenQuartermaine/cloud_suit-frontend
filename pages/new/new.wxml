@@ -1,4 +1,4 @@
-<!--pages/list/list.wxml-->
+
 <view class="wrapper">
 <view class="row">
   <view class="details">Details</view>
@@ -6,10 +6,10 @@
 </view>
 
 <view class="addphotos">
-  <view>
+  <view class="background-image">
    <image src='{{tempFilePaths}}' bindtap='buttonClicked'></image> 
   </view>
-  <button class="add" form-type="submit">Add Photos</button>
+  <button class="add" bindtap='buttonClicked'>Add Photos</button>
 </view>
 
   <!--input.wxml-->
@@ -26,7 +26,7 @@
   </view> 
 
   <!-- Refer to the Github repository above if you want the complete form -->
-  <button class="bottom" form-type="submit">Next</button>
+  <button id="bottom">Next</button>
  </form>
  </view>
 
