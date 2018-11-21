@@ -4,13 +4,16 @@
 
 <form bindtap='bindFormSubmit'>
   <view class="input-fields">
-    <input type="text" placeholder="Location.." bindinput="inputEvent"></input>
+    <input type="text" placeholder="From?" bindinput="inputEvent"></input>
+  </view>
+  <view class="input-fields">
+    <input type="text" placeholder="To?" bindinput="inputEvent"></input>
   </view>
   <view class="input-fields">
     <input type="text" placeholder="Dates.." bindinput="inputEvent"></input>
   </view>
   <view class="input-fields">
-    <input type="check" placeholder="Category" bindinput="inputEvent"></input>
+    <input type="check" placeholder="Passengers" bindinput="inputEvent"></input>
   </view>
 </form>
 
