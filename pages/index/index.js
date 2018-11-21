@@ -46,4 +46,14 @@ Page({
       url: "../index/index"
     });
   },
+  
+  showJet(e) {
+    console.log(e)
+    const data = e.currentTarget.dataset;
+    const jet = data.jet;
+
+    wx.navigateTo({
+      url: `../show/show?id=${jet.id}`
+    });
+  }
 })

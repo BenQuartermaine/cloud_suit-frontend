@@ -104,3 +104,4 @@ Page({
   onShareAppMessage: function () {
   
   },
+})
