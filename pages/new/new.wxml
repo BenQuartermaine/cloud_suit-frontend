@@ -17,10 +17,17 @@
   <form bindsubmit="bindFormSubmit">
   
   <view class="section">
+<<<<<<< HEAD:pages/list/list.wxml
     <input placeholder='enter the model'></input>
     <input placeholder='add amentities'></input>
     <input placeholder='enter the model'></input>
     <input placeholder='add amentities'></input>
+=======
+    <input placeholder='model'></input>
+    <input placeholder='price'></input>
+     <input placeholder='availability'></input>
+     <input placeholder='range of planes'></input>
+>>>>>>> master:pages/new/new.wxml
   </view> 
 
   <!-- Refer to the Github repository above if you want the complete form -->

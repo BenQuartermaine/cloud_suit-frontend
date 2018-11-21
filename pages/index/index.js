@@ -1,7 +1,6 @@
-//index.js
-//获取应用实例
-
+// pages/index/index.js
 Page({
+<<<<<<< HEAD
   data: {
    array: [1, 2, 3, 4, 5, 6, 7, 8, 9]
   },
@@ -12,9 +11,13 @@ bindPickerChange: function (e) {
       index: e.detail.value
     })
   },
+=======
+
+data: {},
+>>>>>>> master
   //事件处理函数
   getUserInfo: function (e) {
-    console.log(e)
+    // update local storage with user info
     let user = wx.getStorageSync("currentUser")
     let currentUser = Object.assign(user, e.detail.userInfo)
 
@@ -26,3 +29,4 @@ bindPickerChange: function (e) {
     });
   }
 })
+

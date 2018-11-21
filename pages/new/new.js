@@ -66,10 +66,12 @@ Page({
   buttonClicked: function() {
     var page = this;
     wx.chooseImage({
-      count: 1,
+      count: 3,
       sizeType: ['original', 'compressed'],
       sourceType: ['album', 'camera'],
       success(res) {
+        console.log(res)
+      
         const tempFilePaths = res.tempFilePaths;
         page.setData({tempFilePaths})
       }
