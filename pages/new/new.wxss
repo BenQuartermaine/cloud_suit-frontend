@@ -31,8 +31,8 @@ button{
   border-radius: 50rpx;
   color: white;
   font-family: roboto;
-  font-size: 13px;
-  width:33%
+  font-size: 30rpx;
+  width:33%;
 }
 
  /* .add{
