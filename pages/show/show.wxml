@@ -2,7 +2,7 @@
 <!-- title and book plane button -->
 <view class='header-wrapper'>
   <button class='book-button'>Book</button>
-  <text class='title'>Jet.name</text>
+  <text class='title'>{{model}}</text>
 </view>
 
 <!-- Image carousel -->
@@ -13,7 +13,7 @@
 <!-- Details of jet section -->
 <view class='details-wrapper'>
   <view class='details-model'>
-    <text>jet.model</text>
+    <text>{{model}}</text>
   </view>
   <view class='details-price'>
     <text>jet.price</text>
