@@ -23,7 +23,7 @@
   </view> 
 
   <!-- Refer to the Github repository above if you want the complete form -->
-  <button id="bottom">Submit</button>
+  <button id="bottom" formType="submit">Submit</button>
  </form>
  </view>
 
