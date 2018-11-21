@@ -6,9 +6,7 @@
 </view>
 
 <view class="addphotos">
-  <view class="background-image">
-   <image src='{{tempFilePaths}}' bindtap='buttonClicked'></image> 
-  </view>
+   <image class='background-image' src='{{tempFilePaths}}' bindtap='buttonClicked'></image> 
   <button class="add" bindtap='buttonClicked'>Add Photos</button>
 </view>
 

@@ -14,12 +14,11 @@
 } 
 
 .background-image{
-  height:300rpx;
-  width:100%;
-  padding-bottom:40rpx;
-  margin-bottom: 60rpx;
+  height:500rpx;
+  width: 750rpx;
 
 }
+
 
 button{
   padding:16rpx 20rpx;
@@ -32,7 +31,7 @@ button{
 }
 
  .add{
-  margin-top: 200rpx;
+  margin-top: 20rpx;
 } 
 .addphotos{
   display: flex;
@@ -40,7 +39,6 @@ button{
   flex-direction:column;
   width: 100%;
   margin-top: 40rpx;
-  height: 750rpx;
 }
 
 .section{
