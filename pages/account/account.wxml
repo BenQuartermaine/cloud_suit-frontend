@@ -9,8 +9,8 @@
 
 <view class="wrapper">
  <view class="row">
-   <view class="renter">Renter</view>
-   <view class="rentee">Rentee</view>
+   <view class="renter">My Planes</view>
+   <view class="rentee">My Trips</view>
  </view>
   <button bindtap="buttonLink">List My Plane</button>
  <!-- <view class="row">
