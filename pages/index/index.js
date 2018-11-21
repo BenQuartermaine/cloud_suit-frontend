@@ -10,6 +10,14 @@ Page({
   onLoad: function (options) {
     let that = this;
 
+    const userId = wx.getStorageSync("userId")
+    const userInfo = wx.getStorageSync("userInfo")
+
+    this.setData({
+      userId: userId,
+      userInfo: userInfo
+    }) 
+
     wx.request({
       url: 'https://cloud-suite.herokuapp.com/api/v1/jets',
       method: 'GET',
@@ -20,7 +28,6 @@ Page({
           jets
         )
       }
-
     })
   },
   
@@ -31,51 +38,7 @@ Page({
     })
   },
   //事件处理函数
-  getUserInfo: function (e) {
-    let that = this
-    const host = 'https://cloud-suite.herokuapp.com/'
-    console.log('processing to login')
-    // get tecent code
-    wx.login({
-      success: (res) => {
-        // give code to backend
-        wx.request({
-          url: host + 'login',
-          method: 'post',
-          data: {
-            code: res.code
-          },
-          // backend return openid
-          success: (res) => {
-            console.log(res)
-            let id = { id: res.data.userId }
-            // save openid to local storage
-            wx.setStorageSync("currentUser", id)
-            that.getinfo(e)
-          }
-        })
-      }
-    })
-    
 
-  },
-
-  getinfo(e) {
-    // update local storage with user info
-    let user = wx.getStorageSync("currentUser")
-    let currentUser = Object.assign(user, e.detail.userInfo)
-
-    this.setData({
-      currentUser: currentUser,
-      hasUserInfo: true
-    })
-
-    wx.setStorageSync("currentUser", currentUser)
-    wx.switchTab({
-      url: "../index/index"
-    });
-  },
-  
   showJet(e) {
     console.log(e)
     const data = e.currentTarget.dataset;
