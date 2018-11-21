@@ -16,11 +16,11 @@
     <text>{{model}}</text>
   </view>
   <view class='details-price'>
-    <text>jet.price</text>
+    <text>{{price_jet}}</text>
   </view>
   <view>
     <view class='amenities'>
-      <text>jet.description</text>
+      <text>{{description}}</text>
     </view>
   </view>
 </view>

@@ -13,6 +13,7 @@ Page({
    */
   onLoad: function (options) {
     let that = this
+    // get the jet data and set to page data
     wx.request({
       url: `https://cloud-suite.herokuapp.com/api/v1/jets/${options.id}`,
       method: "GET",
@@ -24,7 +25,6 @@ Page({
         )
       }
     })
-    console.log(this.data.jet)
   },
 
   /**

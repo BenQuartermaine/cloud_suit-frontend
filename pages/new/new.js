@@ -23,10 +23,11 @@ Page({
   },
 
   bindFormSubmit: function (e) {
-    let currentUser = wx.getStorageSync("currentUser")
+    // get user id from local storage
+    let userId = wx.getStorageSync("userId")
     let user = {
       user: {
-        id: currentUser.id
+        id: userId
       }
     }
     let jet = {
@@ -35,17 +36,18 @@ Page({
       location: e.detail.value.location,
       capacity_of_passengers: e.detail.value.capacity_of_passengers
     }
+    // wrap user and submission data as an object
     let request = Object.assign(user, jet)
 
-    //Get api data
+    // 
     wx.request({
       url: 'https://cloud-suite.herokuapp.com/api/v1/jets',
       method: 'POST',
       data: request,
-      success() {
-        // set data on index page and show
+      success(res) {
+        // get api response with jet's id, to navigateTo show page
         wx.navigateTo({
-          url: '/pages/show/show'
+          url: `/pages/show/show?id=${res.data.id}`
         });
       }
     });

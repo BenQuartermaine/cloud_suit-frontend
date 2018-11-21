@@ -12,15 +12,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // get user id from local storage if any
     let userId = wx.getStorageSync("userId")
     if (userId) {
+      // if already logged in, switch directly to account page
       wx.switchTab({
         url: "../account/account"
       });
     }else {
+      // if haven't logged in, do the login process
       let that = this
       const host = 'https://cloud-suite.herokuapp.com/'
-      console.log('processing to login')
       // get tecent code
       wx.login({
         success: (res) => {
@@ -33,10 +35,8 @@ Page({
             },
             // backend return openid
             success: (res) => {
-              console.log(res)
-              let id = { id: res.data.userId }
               // save openid to local storage
-              wx.setStorageSync("userId", id)
+              wx.setStorageSync("userId", res.data.userId)
             }
           })
         }
@@ -45,18 +45,15 @@ Page({
   },
 
   getUserInfo: function (e) {
+    // when user click the login button, get the userInfo
     let userInfo = e.detail.userInfo
+    // store into local storage
     wx.setStorageSync("userInfo", userInfo)
     
     wx.switchTab({
       url: "../account/account"
     });
 
-  },
-
-  getinfo(e) {
-    // update local storage with user info
-    
   },
 
   /**
