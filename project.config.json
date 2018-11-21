@@ -36,7 +36,11 @@
 			"list": []
 		},
 		"miniprogram": {
+<<<<<<< HEAD
+			"current": 4,
+=======
 			"current": 5,
+>>>>>>> master
 			"list": [
 				{
 					"id": -1,
@@ -64,6 +68,10 @@
 				},
 				{
 					"id": -1,
+<<<<<<< HEAD
+					"name": "list",
+					"pathName": "pages/list/list"
+=======
 					"name": "List",
 					"pathName": "pages/list/list",
 					"query": ""
@@ -72,6 +80,7 @@
 					"id": -1,
 					"name": "New",
 					"pathName": "pages/new/new"
+>>>>>>> master
 				}
 			]
 		}
