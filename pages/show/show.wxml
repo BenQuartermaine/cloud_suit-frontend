@@ -1,3 +1,14 @@
+
+<view class="wrapper">
+  <view class="row">
+    <view class="details">Details</view>
+    <view class="confirm">Confirm</view>
+  </view>
+  <image>src='../images/sky2.jpg'</image>
+  <view class="model">1</view>
+  <view class="price">200000RMB/hour</view>
+</view>
+
 <!--pages/show/show.wxml-->
 <view class='heading'>
   <text>Heading</text>
@@ -8,3 +19,4 @@
 <view>
   <image>This will be an image slider</image>
 </view>
+
