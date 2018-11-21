@@ -1,2 +1,8 @@
-<!--pages/confirmation/confirmation.wxml-->
-<text>pages/confirmation/confirmation.wxml</text>
+<!--pages/confirmation/confirmation.wxml--> 
+<view class="modalDlg" wx:if="{{showModal}}">
+    <image src="/images/me.png"/>
+    <text>Booking Confirmation</text>
+    <button bindtap="go"></button>
+</view>
+ 
+<button bindtap="submit">点我弹窗</button>

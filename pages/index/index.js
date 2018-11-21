@@ -1,8 +1,7 @@
-//index.js
-//获取应用实例
-
+// pages/index/index.js
 Page({
-  data: {},
+
+data: {},
   //事件处理函数
   getUserInfo: function (e) {
     console.log(e)
@@ -17,3 +16,4 @@ Page({
     });
   }
 })
+
