@@ -1,6 +1,4 @@
-<!--pages/results/results.wxml-->
-<<<<<<< HEAD
-=======
+
   <view class="search-bar">
     <input type="text" style='' placeholder="Search..." bindinput="inputEvent"></input>
   </view>
@@ -12,4 +10,4 @@
     </view>
   </block>
 </view>
->>>>>>> fe7f71f521ca441b0cf3e3a37d7d7b9391005466
+

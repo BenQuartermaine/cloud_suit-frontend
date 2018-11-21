@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-/* pages/index/index.wxss */
-=======
+
 /**index.wxss**/
 .userinfo {
   display: flex;
@@ -68,4 +66,3 @@
   top: 5px;
   left: 10px;
 }
->>>>>>> fe7f71f521ca441b0cf3e3a37d7d7b9391005466
