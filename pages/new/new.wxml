@@ -1,4 +1,4 @@
-<!--pages/list/list.wxml-->
+
 <view class="wrapper">
 <view class="row">
   <view class="details">Details</view>
@@ -15,10 +15,11 @@
   <form bindsubmit="bindFormSubmit">
   
   <view class="section">
-    <input class="placeholder" placeholder='model'></input>
-    <input class="placeholder" placeholder='price'></input>
-     <input class="placeholder" placeholder='date'></input>
-     <input class="placeholder" placeholder='range of planes'></input>
+    <input name='model' placeholder='model'></input>
+    <input name='manufactory' placeholder='manufactory'></input>
+    <input name='location' placeholder='parking airport'></input>
+    <input name='capacity_of_passengers' placeholder='Max capacity of passagers'></input>   
+
   </view> 
 
   <!-- Refer to the Github repository above if you want the complete form -->

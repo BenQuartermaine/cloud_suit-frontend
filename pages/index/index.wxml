@@ -1,25 +1,39 @@
-<form bindtap='bindFormSubmit'>
-  <view class="input-fields">
-    <input type="text" placeholder="From?" bindinput="inputEvent"></input>
-  </view>
-  <view class="input-fields">
-    <input type="text" placeholder="To?" bindinput="inputEvent"></input>
-  </view>
-  <view class="input-fields">
-    <input type="text" placeholder="Dates.." bindinput="inputEvent"></input>
-  </view>
-  <view class="input-fields">
-    <input type="check" placeholder="Passengers" bindinput="inputEvent"></input>
-  </view>
-</form>
+<!--index.wxml-->
 
+<button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
 
-<block wx:for="{{['Restaurant 1']}}">
-  <view bindtap='jumpToPage' class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/benquartermaine');">
-      <view class="card-category">{{item}}</view>
-    <view class="card-description">
-      <text>{{item.story}}</text>
+<block wx:else>
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{currentUser.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{currentUser.nickName}}</text>
+  </view>
+  
+  <form bindtap='bindFormSubmit'>
+    <view class="input-fields">
+      <input type="text" placeholder="From?" bindinput="inputEvent"></input>
     </view>
+    <view class="input-fields">
+      <input type="text" placeholder="To?" bindinput="inputEvent"></input>
+    </view>
+    <view class="input-fields">
+      <input type="text" placeholder="Dates.." bindinput="inputEvent"></input>
+    </view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker input-fields">
+        Number of passengers: {{array[index]}}
+      </view>
+    </picker>
+  </form>
+
+  <view class='card-wrap'>
+    <block wx:for="{{jets}}"
+    wx:for-item="jet"
+    wx:key="jet.id"
+    bindtap="showJet">
+      <view class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+          <view class="card-category">{{jet.model}}</view>
+      </view>
+    </block>
   </view>
 </block>
 
