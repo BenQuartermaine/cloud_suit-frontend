@@ -4,12 +4,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 100rpx 0rpx 50rpx 0rpx;
 }
 
 .userinfo-avatar {
-  width: 160rpx;
-  height: 128rpx;
-  margin: 20rpx;
+  width: 180rpx;
+  height: 180rpx;
   border-radius: 50%;
 }
 
@@ -56,12 +56,16 @@
   border-radius: 3px;
   width: 229px;
   height: 32px;
-  color: #C1C1C1;
+  color: #1D1F36;
 }
 .picker {
-  height: auto 0px;
-
+  color: #808084;
+  display: flex;
+  align-items: center;
 } 
+.picker view {
+  margin-left: 20rpx;
+}
 .input-fields input {
   position: relative;
   top: 5px;

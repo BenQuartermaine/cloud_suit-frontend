@@ -42,7 +42,8 @@ Page({
       url: 'https://cloud-suite.herokuapp.com/api/v1/jets',
       method: 'POST',
       data: request,
-      success() {
+      success(res) {
+        console.log(res)
         // set data on index page and show
         wx.navigateTo({
           url: '/pages/show/show'
