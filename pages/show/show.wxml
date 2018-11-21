@@ -7,7 +7,7 @@
 
 <!-- Image carousel -->
 <view class='image-wrapper'>
-  <image src=''/>
+  <image src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan"></image>
 </view>
 
 <!-- Details of jet section -->
@@ -26,6 +26,16 @@
 </view>
 
 <!-- Reviews render -->
+<view class='reviews-header'>Reviews</view>
+<view class="message">
+  <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan"></image>
+  <view class='body-wrapper'>
+    <view class="message-name">
+      <text class='name-date'>Gab Dehan  |  10/07/17</text>
+      <text>This was a great jet to ride in. WIll show to all my friends</text> 
+    </view>
+  </view>
+</view>
 
 
 
