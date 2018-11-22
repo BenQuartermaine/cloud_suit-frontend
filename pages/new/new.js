@@ -9,8 +9,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // set the upload pic image
-    tempFilePaths: '/images/upload.png'
+
+    tempFilePaths: "/images/upload.png",
+    multiArray: [['Avro RJ70', 'Beechjet 400A', 'Premier 1'], ['Boeing', 'Beechcraft', 'Cesna', 'Gulfstream']],
+    location: ['Beijing China Airport', 'Beijing Nanyuan Airport', 'Shenzhen Bao’an International', 'Zhuhai Jinwan Airport', 'Shenzhen Bao’an International', 'Hong Kong International', 'Shanghai Hongqiao International', 'Shanghai Pudong International', 'Hangzhou Xiaoshan International', 'Lijian Sanyi Airport', ' Guangzhou Baiyun International', 'Macau International']
+
   },
 
   imageClicked: function() {
@@ -38,6 +41,7 @@ Page({
           //got url from LeanCloud
           console.log(file.url())
     // get user id from local storage
+
           let userId = wx.getStorageSync("userId")
           let user = {
             user: {
@@ -45,12 +49,16 @@ Page({
             }
           }
           let jet = {
-            model: e.detail.value.model,
-            manufactory: e.detail.value.manufactory,
-            location: e.detail.value.location,
-            capacity_of_passengers: e.detail.value.capacity_of_passengers,
-            photo: file.url()
-          }
+      // get user input from 'e', get picker data from page data
+      model: this.data.multiArray[0][this.data.multiIndex[0]],
+      manufactory: this.data.multiArray[1][this.data.multiIndex[1]],
+      location: this.data.location[this.data.index],
+      capacity_of_passengers: e.detail.value.capacity_of_passengers,
+      price_jet: e.detail.value.price_jet,
+      available_start_date: this.data.start_date,
+      available_end_date: this.data.end_date,
+       photo: file.url()
+    }
           // wrap user and submission data as an object
           let request = Object.assign(user, jet)
           wx.request({
@@ -65,7 +73,34 @@ Page({
             }
           });
         }).catch(console.error)
+  },
+  // picker for start & end date
+  bindStartDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      start_date: e.detail.value
+    })
+  },
 
+  bindEndDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      end_date: e.detail.value
+    })
+  },
+  // picker for model & manyfactory
+  bindMultiPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      multiIndex: e.detail.value
+    })
+  },
+  // picker for location
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
   },
   /**
    * 生命周期函数--监听页面加载
