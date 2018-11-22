@@ -83,6 +83,7 @@ picker {
 }
 
 .formcontainer{
+  margin-left:30rpx;
   display: flex;
   flex-direction: c
 }
@@ -95,6 +96,7 @@ picker {
   flex-wrap: wrap;
   justify-content: center;
   height:300rpx;
+  
 }
 
 .input-fields{

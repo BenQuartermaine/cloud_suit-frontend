@@ -4,12 +4,27 @@
     <form bindtap='bindFormSubmit'>
       <view class='formcontainer'>
 
-        <view class="input-fields">
+        <!-- <view class="input-fields">
           <input type="text" placeholder="From" bindinput="inputEvent"></input>
-        </view>
-        <view class="input-fields">
+        </view> -->
+           <picker bindchange="bindPickerChange" value="{{index}}" range="{{location}}">
+      <view>
+        <view wx:if="{{!index}}">From</view>
+        {{location[index]}}
+      </view>
+    </picker>
+
+        <!-- <view class="input-fields">
           <input type="text" placeholder="To" bindinput="inputEvent"></input>
-        </view>
+        </view> -->
+
+
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{location}}">
+      <view>
+        <view wx:if="{{!index}}">TO</view>
+        {{location[index]}}
+      </view>
+    </picker>
       
         <picker mode="date" value="{{date}}" start="2018-11-22" end="2019-11-22" bindchange="bindDatePickerChange">
           <view>

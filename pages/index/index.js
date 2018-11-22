@@ -3,7 +3,9 @@
 
 Page({
   data: {
-    array: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    array: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    location: ['Beijing China Airport', 'Beijing Nanyuan Airport', 'Shenzhen Bao’an International', 'Zhuhai Jinwan Airport', 'Shenzhen Bao’an International', 'Hong Kong International', 'Shanghai Hongqiao International', 'Shanghai Pudong International', 'Hangzhou Xiaoshan International', 'Lijian Sanyi Airport', ' Guangzhou Baiyun International', 'Macau International']
+
   },
 
   onLoad: function (options) {
