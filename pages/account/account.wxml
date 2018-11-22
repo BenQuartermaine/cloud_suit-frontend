@@ -22,12 +22,21 @@
 <view class="navbar">
   <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
 </view>
+
 <view hidden="{{currentTab!==0}}">
   tab_01
+  <block wx:for="{{jets}}" wx:key="jet">
+   <view class="message">
+   <text> {{jet.model}}</text>
+   <block wx:for="{{jet.reservation_plane}}" wx:key="plane">
+    <text> {{plane.start_date}} to {{plane.end_date}}</text>
+    <text>Total: {{plane.total_price}}</text>
+   </block>
+  </view>
+  </block>
 </view>
 
 <view hidden="{{currentTab!==1}}">
-  
   <block wx:if="{{jet}}">
  <block wx:for="{{jet}}">
   <view class="message">
