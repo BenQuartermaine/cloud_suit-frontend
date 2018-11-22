@@ -30,13 +30,22 @@ Page({
       }
     })
   },
+
+  bindDatePickerChange: function (e) {
+    console.log('the chosen one!', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
+  },
   
-  bindPickerChange: function (e) {
+  bindTimePickerChange: function (e) {
     console.log('the chosen one!', e.detail.value)
     this.setData({
       index: e.detail.value
     })
   },
+
+
   //事件处理函数
   // when click one jet, navigate to show page with jet's id
 

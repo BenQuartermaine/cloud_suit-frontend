@@ -1,9 +1,6 @@
 <!--index.wxml-->
 
-<view class="userinfo">
-  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-</view>
+<view>A banner should be here</view>
 
 <form bindtap='bindFormSubmit'>
   <view class="input-fields">
@@ -12,12 +9,18 @@
   <view class="input-fields">
     <input type="text" placeholder="To?" bindinput="inputEvent"></input>
   </view>
-  <view class="input-fields">
-    <input type="text" placeholder="Dates.." bindinput="inputEvent"></input>
-  </view>
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+
+  <picker mode="date" value="{{date}}" start="2018-11-22" end="2019-11-22" bindchange="bindDatePickerChange">
     <view class="picker input-fields">
-      Number of passengers: {{array[index]}}
+      <view wx:if="{{!date}}">Date?</view>
+      {{date}}
+    </view>
+  </picker>
+  
+  <picker bindchange="bindTimePickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker input-fields">
+      <view wx:if="{{!index}}">No. passengers?</view>
+      {{array[index]}}
     </view>
   </picker>
 </form>
