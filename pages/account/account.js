@@ -22,7 +22,7 @@ Page({
         description: "Very big plane for lots of your friends.",
         price: "$6000",
         name: "Sarah Kennedy"
-      },
+      }
     ]
   },
 
