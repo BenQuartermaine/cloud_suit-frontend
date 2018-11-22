@@ -18,6 +18,7 @@
     </view>
 
     <view class="section">
+
       <view class="section-title">Rating</view>
       <picker bindchange="bindPickerChange" value="{{index}}" range="{{reviews}}">
       <view class="picker">
@@ -27,9 +28,9 @@
     </picker>
   </view>
 
-
   <button bindtap='reviewsuccess'  style="margin-bottom:50px "form-type="submit" loading="{{loading}}">Submit</button>
   </form>
+
 </view>
 </view>
 

@@ -1,71 +1,112 @@
 /* pages/account/account.wxss */
+
+/* User information and avatar */
 .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 50rpx 0rpx 40rpx 0rpx;
 }
-
 .userinfo-avatar {
   width: 180rpx;
   height: 180rpx;
   border-radius: 50%;
 }
-
 .userinfo-nickname {
   margin-top: 20rpx;
-  color: #aaa;
+  color: #1D1F34;
 }
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.upcoming, .history, .renter, .rentee{
-  width:200rpx;
-  height: 60rpx;
-  text-align: center;
-} 
-button {
-  margin-top: 40rpx;
+/* Button styling */
+.list-button button {
   background: #872426;
   border-radius: 50px;
   color: white;
   padding: 0rpx 60rpx;
   font-size: 30rpx;
+  margin: 20rpx 0rpx 0rpx 10rpx;
 }
  
-.renter {
-background: #1D1F34;
-border-radius: 4px 0px 0px 4px;
-color: white;
-padding: 10rpx 20rpx;
-border: 1px solid #1D1F34;
-}
-.rentee {
-background: #FCFCFC;
-border: 1px solid #1D1F34;
-border-radius: 0px 4px 4px 0px;
-padding: 10rpx 20rpx;
-}
-.row {
+ /* toggle between user states */
+ .state-wrapper {
 display: flex;
 justify-content: center;
-margin-top: 40rpx;
-border-radius: 5px;
-} 
-.banner {
-  margin-top: 30rpx;
-  margin: 20rpx;
+margin: 20rpx 10rpx 0rpx 0rpx;
 }
-.header{
-  font-weight: bold;
-  font-size: 50rpx;
+.planes-trips {
+  padding: 20rpx 20rpx;
+  font-size: 25rpx;
+ }
+.my-planes {
+  background: #1D1F34;
+  border-radius: 4px 0px 0px 4px;
+  color: white;
+  border: 1px solid #1D1F34;
 }
-.tag-line {
-  font-weight: bold;
-  font-size: 45rpx;
-  padding: 40rpx;
+.my-trips {
+  background: #FCFCFC;
+  border: 1px solid #1D1F34;
+  border-radius: 0px 4px 4px 0px;
+}
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Upcoming and history slide */
+.trips-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.up-hist {
+  padding: 10rpx 20rpx;
+  font-size: 25rpx;
+  margin-top: 20rpx;
+ }
+.upcoming {
+  background: #1D1F34;
+  border-radius: 4px 0px 0px 4px;
+  color: white;
+  border: 1px solid #1D1F34;
+}
+.history {
+  background: #FCFCFC;
+  border: 1px solid #1D1F34;
+  border-radius: 0px 4px 4px 0px;
+}
+
+/* Reviews section */
+.message {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 3px; 
+  margin: 10rpx;
+}
+.message:last-child {
+  border-bottom: none;
+}
+.avatar-large {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.body-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.message-name {
+  padding-left: 10px;
+  min-width: 100px;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.message-body {
+  padding-left: 10px;
+  font-size: 13px;
+  color: rgba(0,0,0,0.7);
 }
