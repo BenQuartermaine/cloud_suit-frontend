@@ -10,6 +10,7 @@
     "pages/sumbitReview/sumbitReview",
     "pages/new/new",
     "pages/landing/landing"
+    "pages/login/login"
   ],
   "window":{
     "backgroundTextStyle":"light",

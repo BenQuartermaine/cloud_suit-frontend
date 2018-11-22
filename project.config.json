@@ -39,12 +39,6 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "login page",
-					"pathName": "pages/index/index",
-					"query": ""
-				},
-				{
-					"id": -1,
 					"name": "index page",
 					"pathName": "pages/index/index",
 					"query": ""
@@ -80,15 +74,9 @@
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "date",
-					"pathName": "pages/date/date",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "landing",
-					"pathName": "pages/landing/landing",
+					"id": 7,
+					"name": "Login",
+					"pathName": "pages/login/login",
 					"query": ""
 				}
 			]
