@@ -6,6 +6,12 @@ Page({
    */
 
   data: {
+    //content for navbar
+    statebar: ['My Plane', 'My Trips'],
+    currentState: 0,
+    navbar: ['Upcoming', 'History'],
+    currentTab: 0,
+
     fakie: [{
       model: "GX1000 Jet",
       description: "Best plane i've ever been in, period.",
@@ -25,6 +31,20 @@ Page({
       },
     ]
   },
+  //MyPlanesMyTrips
+  stateTap: function (e) {
+    this.setData({
+      currentState: e.currentTarget.dataset.idx
+    })
+  },
+ //UpcomingHistory
+  navbarTap: function (e) {
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
+    })
+  },
+
+
 
 // Switcher function
   switch1Change: function (e) {
