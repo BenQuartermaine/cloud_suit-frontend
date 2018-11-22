@@ -16,12 +16,12 @@
   
   <view class="section">
     
-    <input name='price_jet' placeholder='$ price per hour'></input>
+    <input name='price_jet' placeholder='$/day'></input>
     <input name='capacity_of_passengers' placeholder='capacity'></input>
 
     <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}"  range="{{multiArray}}">
       <view>
-        <view wx:if="{{!multiIndex}}">model & Manufactory</view>
+        <view wx:if="{{!multiIndex}}">model & manufacturer</view>
         {{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}
       </view>
     </picker>

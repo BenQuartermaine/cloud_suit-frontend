@@ -5,13 +5,16 @@
 } 
 
 .details {
- background: #1D1F34;
- color: white;
+background: #1D1F34;
+border-radius: 4px 0px 0px 4px;
+color: white;
 }
 
 .confirm{
-  background: lightgrey;
-  opacity: 0.8;
+background: #FCFCFC;
+border: 1px solid #1D1F34;
+box-sizing: border-box;
+border-radius: 0px 4px 4px 0px;
 }
  .row {
   display: flex;
@@ -25,7 +28,7 @@
 
 }
 
-button{
+button .wrapper{
   padding:16rpx 20rpx;
   background: #872426;
   border-radius: 50rpx;
@@ -39,7 +42,7 @@ button{
   margin-top: 40rpx;
   margin-bottom: 40rpx;
 }  */
-.addphotos{
+.addphotos {
   display: flex;
   align-items: center;
   flex-direction:column;
@@ -47,7 +50,7 @@ button{
   margin-top: 40rpx;
 }
 
-.section{
+.section {
   margin-bottom: 30rpx;
   display: flex;
   flex-wrap: wrap;
@@ -63,16 +66,16 @@ button{
   padding: 20rpx;
   margin:20rpx;
   font-size: 12px; 
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-align: center;
   font-weight: bold;
   
 
 }
- .placeholder{
+ .placeholder {
   font-size: 12px;
   width:100%;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-align: center;
   font-weight: bold;
 }
@@ -80,7 +83,7 @@ button{
 .wrapper{
   text-align: center
 }
-#bottom{
+#bottom {
   margin-top:30rpx;
   margin-bottom: 10rpx;
 }
@@ -95,7 +98,7 @@ button{
   padding: 20rpx;
   margin:20rpx;
   font-size: 12px; 
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-align: center;
   font-weight: bold;
 }
