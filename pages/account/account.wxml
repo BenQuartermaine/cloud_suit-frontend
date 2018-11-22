@@ -25,10 +25,10 @@
 
 <view hidden="{{currentTab!==0}}">
   tab_01
-  <block wx:for="{{jets}}" wx:key="jet">
+  <block wx:for="{{jets}}" wx:for-item="jet">
    <view class="message">
    <text> {{jet.model}}</text>
-   <block wx:for="{{jet.reservation_plane}}" wx:key="plane">
+   <block wx:for="{{jet.reservation_plane}}" wx:for-item="plane">
     <text> {{plane.start_date}} to {{plane.end_date}}</text>
     <text>Total: {{plane.total_price}}</text>
    </block>
@@ -37,7 +37,7 @@
 </view>
 
 <view hidden="{{currentTab!==1}}">
-  <block wx:if="{{jet}}">
+  <!-- <block wx:if="{{jet}}">
  <block wx:for="{{jet}}">
   <view class="message">
     <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/{{jet.name}}"></image>
@@ -50,9 +50,9 @@
     </view>
   </view>
  </block>
-</block> 
+</block>  -->
 
-<block wx:else="{{fakie}}">
+<!-- <block wx:else="{{fakie}}">
  <block wx:for="{{fakie}}" wx:for-item="fake">
   <view class="message">
     <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/{{fake.name}}"></image>
@@ -65,11 +65,22 @@
     </view>
   </view>
  </block>
-</block>
+</block> -->
+history🍹
+<block wx:for="{{jets}}" wx:for-item="jet">
+   <view class="message">
+   <text> {{jet.model}}</text>
+   <block wx:for="{{jet.reservation_plane}}" wx:for-item="plane">
+    <text> {{plane.start_date}} to {{plane.end_date}}</text>
+    <text>Total: {{plane.total_price}}</text>
+   </block>
+  </view>
+  </block>
 </view>
 </view>
 
 <view hidden="{{currentState!==1}}">
+
 <view class="userinfo">
   <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
   <text class="userinfo-nickname">{{userInfo.nickName}}</text>
@@ -81,39 +92,24 @@
 </view>
 <view hidden="{{currentTab!==0}}">
   tab_01
+  <block wx:for="{{reservation_trip}}" wx:for-item="trip">
+   <view class="message">
+   <text> {{trip.model}}</text>
+    <text> {{trip.start_date}} to {{trip.end_date}}</text>
+    <text>Total: {{trip.total_price}}</text>
+  </view>
+  </block>
 </view>
 
-<view hidden="{{currentTab!==1}}">
-  
-  <block wx:if="{{jet}}">
- <block wx:for="{{jet}}">
-  <view class="message">
-    <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/{{jet.name}}"></image>
-    <view class='body-wrapper'>
-      <view class="message-name">
-        <text class='name-date'>Gab Dehan | 2 months ago</text>
-        <view wx:if="{{reviews.content}}">{{reviews.content}}</view> 
-        <view wx:else>Sooo much CAVIAR.</view>
-      </view>
-    </view>
+<view hidden="{{currentTab!==1}}"> 
+tab_02
+  <block wx:for="{{reservation_trip}}" wx:for-item="trip">
+   <view class="message">
+   <text> {{trip.model}}</text>
+    <text> {{trip.start_date}} to {{trip.end_date}}</text>
+    <text>Total: {{trip.total_price}}</text>
   </view>
- </block>
-</block> 
-
-<block wx:else="{{fakie}}">
- <block wx:for="{{fakie}}" wx:for-item="fake">
-  <view class="message">
-    <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/{{fake.name}}"></image>
-    <view class='body-wrapper'>
-      <view class="message-name">
-        <text class='name-date'>{{fake.name}} | 2 months ago</text>
-        <view wx:if="{{fake.description}}">{{fake.description}}</view> 
-        <view wx:else>Sooo much CAVIAR.</view>
-      </view>
-    </view>
-  </view>
- </block>
-</block>
+  </block>
 </view>
 
 </view>
