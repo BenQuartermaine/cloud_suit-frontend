@@ -1,8 +1,51 @@
 <!--pages/confirmation/confirmation.wxml--> 
-<view class="modalDlg" wx:if="{{showModal}}">
-    <image src="/images/me.png"/>
-    <text>Booking Confirmation</text>
-    <button bindtap="go"></button>
+
+<!-- header section -->
+<view class='confirm-title'>
+  <text>Booking Confirmation</text>
 </view>
- 
-<button bindtap="submit">点我弹窗</button>
+
+
+<!-- image display section -->
+<view class='image-wrapper'>
+  <image src="http://buzzghana.com/wp-content/uploads/2013/12/Airbus-319-Corporate-Jet-Owner-Vijay-Mallya-2.jpg"></image>
+</view>
+
+<view class='details-price-wrapper'>
+  <!-- plane information -->
+  <view class='plane-details'>
+    <view class='model'>
+      <text>Model of plane</text>
+    </view>
+    <view class='description'>
+      <text class='bold'>Plane description</text>
+      <text>This is a plane description baby</text>
+    </view>
+  </view>
+
+  <!-- date display section -->
+  <view class='date-price-wrapper'>
+    <view class='date-display'>
+      <view class='date-price start-date'>
+        <text class='bold'>Wednesday</text>
+        <text>20/11/2018</text>
+      </view>
+      <view class='date-price end-date'>
+        <text class='bold'>Friday</text>
+        <text>22/11/2018</text>
+      </view>
+    </view>
+
+    <!-- flight total cost -->
+    <view class='date-price cost'>
+      <text class='bold'>Total cost</text>
+      <text>$340000</text>
+    </view>
+  </view>
+</view>
+
+<!-- confirm booking button -->
+<view class='button-wrapper'>
+  <button bindtap='confirmation' class='book-button'>Confirm</button>
+</view>
+  

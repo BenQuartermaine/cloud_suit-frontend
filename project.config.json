@@ -35,6 +35,7 @@
 			"list": []
 		},
 		"miniprogram": {
+
 			"current": 8,
 			"list": [
 				{
@@ -81,9 +82,6 @@
 				},
 				{
 					"id": -1,
-					"name": "landing",
-					"pathName": "pages/landing/landing",
-					"query": ""
 				},
 				{
 					"id": 8,
