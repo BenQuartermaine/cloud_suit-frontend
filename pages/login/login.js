@@ -35,6 +35,7 @@ Page({
             },
             // backend return openid
             success: (res) => {
+              console.log(res)
               // save openid to local storage
               wx.setStorageSync("userId", res.data.userId)
             }

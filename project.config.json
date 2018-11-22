@@ -78,6 +78,18 @@
 					"name": "Login",
 					"pathName": "pages/login/login",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "landing",
+					"pathName": "pages/landing/landing",
+					"query": ""
+				},
+				{
+					"id": 8,
+					"name": "review",
+					"pathName": "pages/reviews/reviews",
+					"query": ""
 				}
 			]
 		}
