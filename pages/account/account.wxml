@@ -24,7 +24,36 @@
   <view class="up-hist history">History</view>
 </view>
 
-<!-- reviews & upcoming trips section -->
+<!-- Upcoming trips if/else statement—How can we implement the logic for  -->
 
+<block wx:if="{{jet}}">
+ <block wx:for="{{jet}}">
+  <view class="message">
+    <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/{{jet.name}}"></image>
+    <view class='body-wrapper'>
+      <view class="message-name">
+        <text class='name-date'>Gab Dehan | 2 months ago</text>
+        <view wx:if="{{reviews.content}}">{{reviews.content}}</view> 
+        <view wx:else>Sooo much CAVIAR.</view>
+      </view>
+    </view>
+  </view>
+ </block>
+</block> 
+
+<block wx:else="{{fakie}}">
+ <block wx:for="{{fakie}}" wx:for-item="fake">
+  <view class="message">
+    <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/{{fake.name}}"></image>
+    <view class='body-wrapper'>
+      <view class="message-name">
+        <text class='name-date'>{{fake.name}} | 2 months ago</text>
+        <view wx:if="{{fake.description}}">{{fake.description}}</view> 
+        <view wx:else>Sooo much CAVIAR.</view>
+      </view>
+    </view>
+  </view>
+ </block>
+</block>
   
 
