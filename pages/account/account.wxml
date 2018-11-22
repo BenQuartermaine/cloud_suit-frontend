@@ -1,32 +1,26 @@
-<!--pages/account/account.wxml-->
-
-<!-- list and state operator functionality -->
-<view class='navbar-wrapper'>
-  <view class='list-button'>
-    <button bindtap="buttonLink">List</button>
-  </view>
-</view>
-<!-- MyPlanes and MyTrips in Tab-Bar -->
 <view class="statebar">
-<text wx:for="{{statebar}}" data-idx="{{index}}" class="item {{currentState==index ? 'active' : ''}}" wx:key="unique" bindtap="stateTap">{{item}}</text>
-</view>
-
+  <view class="row top">
+    <view wx:for="{{statebar}}" data-idx="{{index}}" class="item {{currentState==index ? 'active' : ''}}" wx:key="unique" bindtap="stateTap">{{item}}</view>
+  </view>
 
 <view hidden="{{currentState!==0}}">
-  <view class="userinfo">
+  <view class= 'userinfo' >
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
+</view>
 
 <!-- upcoming and history slider in Tab-Bar -->
 <view class="navbar">
-  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
-</view>
+  <view class="row">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  </view>
+ </view>
 
 <view hidden="{{currentTab!==0}}">
   tab_01
   <block wx:for="{{jets}}" wx:for-item="jet">
-   <view class="message">
+  <view class="message">
    <text> {{jet.model}}</text>
    <block wx:for="{{jet.reservation_plane}}" wx:for-item="plane">
     <text> {{plane.start_date}} to {{plane.end_date}}</text>
