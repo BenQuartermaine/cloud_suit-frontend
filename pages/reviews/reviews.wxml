@@ -18,21 +18,21 @@
     </view>
 
     <view class="section">
-    <view class="section-title">Rating</view>
-    <picker bindchange="bindPickerChange" value="{{index}}" range="{{reviews}}">
-    <view class="picker">
-      <view wx:if="{{!index}}">💛 ?</view>
-      {{reviews[index]}}
-    </view>
+      <view class="section-title">Rating</view>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{reviews}}">
+      <view class="picker">
+        <view wx:if="{{!index}}">💛 ?</view>
+        {{reviews[index]}}
+      </view>
     </picker>
-    </view>
+  </view>
 
 
-    <button  style="margin-bottom:50px "form-type="submit" loading="{{loading}}">Submit</button>
-    </form>
-
+  <button bindtap='reviewsuccess'  style="margin-bottom:50px "form-type="submit" loading="{{loading}}">Submit</button>
+  </form>
 </view>
 </view>
+
 
 
 

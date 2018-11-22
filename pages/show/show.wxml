@@ -3,7 +3,7 @@
 <view class='header-wrapper'>
   <text class='title'wx:if="{{model}}">{{model}}</text>
   <text class='title'wx:else>Gulfstream G650</text>
-  <button class='book-button'>Book</button>
+  <button class='book-button' bindtap="clicklink">Book</button>
 </view>
 
 <!-- Image carousel -->

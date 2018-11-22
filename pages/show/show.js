@@ -7,6 +7,16 @@ Page({
   data: {
   
   },
+  clicklink: function(e) {
+  
+    wx.navigateTo({
+      url: '/pages/confirmation/confirmation',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+   },
+  
 
   /**
    * 生命周期函数--监听页面加载
@@ -23,14 +33,9 @@ Page({
         that.setData(
           jet
         )
-      }
+      },
     })
   },
-
-
-
-
-
 
   /**
    * 生命周期函数--监听页面初次渲染完成
