@@ -52,6 +52,20 @@ Page({
       }
     });
   },
+
+  bindStartDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      start_date: e.detail.value
+    })
+  },
+
+  bindEndDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      end_date: e.detail.value
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -18,7 +18,17 @@
     <input name='model' placeholder='model'></input>
     <input name='manufactory' placeholder='manufactory'></input>
     <input name='location' placeholder='parking airport'></input>
-    <input name='capacity_of_passengers' placeholder='capacity'></input>   
+    <input name='capacity_of_passengers' placeholder='capacity'></input>
+    <picker mode="date" value="{{start_date}}" start="2015-09-01" end="2017-09-01" bindchange="bindStartDateChange">
+      <view>
+        start date : {{start_date}}
+      </view>
+    </picker>
+    <picker mode="date" value="{{end_date}}" start="2015-09-01" end="2017-09-01" bindchange="bindEndDateChange">
+      <view>
+        end date : {{end_date}}
+      </view>
+    </picker>
 
   </view> 
 
