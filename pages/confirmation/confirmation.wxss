@@ -1,26 +1,88 @@
 /* pages/confirmation/confirmation.wxss */
-    .mask{
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background: #000;
-        z-index: 9000;
-        opacity: 0.7;
-    }
-     
-    .modalDlg{
-        width: 580rpx;
-        height: 620rpx;
-        position: fixed;
-        top: 50%;
-        left: 0;
-        z-index: 9999;
-        margin: -370rpx 85rpx;
-        background-color: #fff;
-        border-radius: 36rpx;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+
+/* Header */
+.confirm-title {
+  font-size: 48rpx;
+  font-weight: bold;
+  text-align: center;
+  padding: 20rpx;
+}
+/* Image styling */
+.image-wrapper image {
+  height: 500rpx;
+  border-radius: 5px;
+}
+
+
+
+.bold {
+  font-weight: bold;
+}
+
+/* Pricing, dates and description */
+.date-price {
+  background:#FFFFFF;
+  border:1px solid #E5E5E5;
+  box-shadow:0px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius:3px;
+  width:80%;
+  padding:20rpx;
+  text-align:center;
+  font-size:30rpx;
+  display:flex;
+  flex-direction:column;
+  margin-bottom:10rpx;
+}
+.details-price-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20rpx 0rpx;
+
+}
+.plane-details {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+.model {
+  background: #1D1F34;
+  border-radius: 4px 0px 0px 4px;
+  font-size: 28rpx;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 20rpx;  
+  margin: 5rpx;
+}
+.description {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 20rpx;  
+  margin: 0rpx 5rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+}
+.date-price-wrapper {
+  margin: 0px;
+}
+
+/* Booking button styling */
+  .book-button {
+  background: #872426;
+  color: white;
+  border-radius: 50px;
+  width: 140rpx;
+  height: 70rpx;
+  display: inline-flex;
+  align-items: center; 
+  justify-content: center;
+  padding: 40rpx 120rpx;
+  font-size: 35rpx;
+  margin-top: 20rpx;
+}
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
