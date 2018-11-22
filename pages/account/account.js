@@ -12,24 +12,24 @@ Page({
     navbar: ['Upcoming', 'History'],
     currentTab: 0,
 
-    fakie: [{
-      model: "GX1000 Jet",
-      description: "Best plane i've ever been in, period.",
-      price: "$6000",
-      name: "Benoit Jeremy"
-    }, {
-        model: "GX9000 Plane",
-        description: "Best plane i've ever been in, period.",
-        price: "$6000",
-        name: "Samuel Jackson"
-      },
-      {
-        model: "Boeing 747",
-        description: "Very big plane for lots of your friends.",
-        price: "$6000",
-        name: "Sarah Kennedy"
-      },
-    ]
+    // fakie: [{
+    //   model: "GX1000 Jet",
+    //   description: "Best plane i've ever been in, period.",
+    //   price: "$6000",
+    //   name: "Benoit Jeremy"
+    // }, {
+    //     model: "GX9000 Plane",
+    //     description: "Best plane i've ever been in, period.",
+    //     price: "$6000",
+    //     name: "Samuel Jackson"
+    //   },
+    //   {
+    //     model: "Boeing 747",
+    //     description: "Very big plane for lots of your friends.",
+    //     price: "$6000",
+    //     name: "Sarah Kennedy"
+    //   },
+    // ]
   },
   //MyPlanesMyTrips
   stateTap: function (e) {
@@ -58,13 +58,25 @@ Page({
    */
   onLoad: function (options) {
     // when page loads, get the user id & info from local storage and save to page data
+    let page = this
     const userId = wx.getStorageSync("userId")
     const userInfo = wx.getStorageSync("userInfo")
 
     this.setData({
       userId: userId,
       userInfo: userInfo
+    });
+    
+    wx.request({
+      url: `https://cloud-suite.herokuapp.com/api/v1/users/${userId}`,
+      method: "GET",
+      success(res){
+        page.setData(
+          res.data
+        )
+      }
     })
+
   },
 
   bindColorChange: function() {
