@@ -5,14 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
+    reviews: ["💛", "💛💛", "💛💛💛", "💛💛💛💛", "💛💛💛💛💛"]
+  },
   
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    const userInfo = wx.getStorageSync("userInfo")
+    this.setData({
+      avatarUrl: userInfo.avatarUrl
+    })
   },
 
   /**

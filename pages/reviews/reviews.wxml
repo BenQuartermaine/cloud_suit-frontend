@@ -1,2 +1,40 @@
-<!--pages/reviews/reviews.wxml-->
-<text>pages/reviews/reviews.wxml</text>
+<view class="backgroundcontainer">
+  <view class="header">How was your flight?</view>
+  <view class="subheader">time to leave a review of your experience</view>
+</view>
+
+<!-- <view class="userinfo">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view> -->
+
+<view class="reviewcontainer">
+  <view class="wrap">
+  <form bindsubmit="bindSubmit">
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{content}}" style="input-size "placeholder="e.g. This plane was great, I really liked the in flight. The experience was amazing!!" class="input-height" name="name" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+    <view class="section">
+    <view class="section-title">Rating</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{reviews}}">
+    <view class="picker">
+      <view wx:if="{{!index}}">💛 ?</view>
+      {{reviews[index]}}
+    </view>
+    </picker>
+    </view>
+
+
+    <button  style="margin-bottom:50px "form-type="submit" loading="{{loading}}">Submit</button>
+    </form>
+
+</view>
+</view>
+
+
+
+
+

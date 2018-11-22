@@ -82,8 +82,12 @@
 				},
 				{
 					"id": -1,
-					"name": "confirmation page",
-					"pathName": "pages/confirmation/confirmation"
+				},
+				{
+					"id": 8,
+					"name": "review",
+					"pathName": "pages/reviews/reviews",
+					"query": ""
 				}
 			]
 		}
