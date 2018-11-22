@@ -1,37 +1,54 @@
 // pages/list/list.js
+
+const app = getApp()
+const AV = require('../../utils/av-weapp-min.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+
     tempFilePaths: "/images/upload.png",
     multiArray: [['Avro RJ70', 'Beechjet 400A', 'Premier 1'], ['Boeing', 'Beechcraft', 'Cesna', 'Gulfstream']],
     location: ['Beijing China Airport', 'Beijing Nanyuan Airport', 'Shenzhen Bao’an International', 'Zhuhai Jinwan Airport', 'Shenzhen Bao’an International', 'Hong Kong International', 'Shanghai Hongqiao International', 'Shanghai Pudong International', 'Hangzhou Xiaoshan International', 'Lijian Sanyi Airport', ' Guangzhou Baiyun International', 'Macau International']
+
   },
 
-  buttonClicked: function () {
+  imageClicked: function() {
     var page = this;
     wx.chooseImage({
-      count: 9,
+      count: 1,
       sizeType: ['original', 'compressed'],
       sourceType: ['album', 'camera'],
       success(res) {
-        const tempFilePaths = res.tempFilePaths;
-        page.setData({ tempFilePaths })
+        page.setData({
+          tempFilePaths: res.tempFilePaths
+        }) 
       }
     })
   },
 
   bindFormSubmit: function (e) {
+    //upload pics to LeanCloud
+      new AV.File('file-name', {
+        blob: {
+          uri: this.data.tempFilePaths[0],
+        },
+      }).save().then(
+        function(file) {
+          //got url from LeanCloud
+          console.log(file.url())
     // get user id from local storage
-    let userId = wx.getStorageSync("userId")
-    let user = {
-      user: {
-        id: userId
-      }
-    }
-    let jet = {
+
+          let userId = wx.getStorageSync("userId")
+          let user = {
+            user: {
+              id: userId
+            }
+          }
+          let jet = {
       // get user input from 'e', get picker data from page data
       model: this.data.multiArray[0][this.data.multiIndex[0]],
       manufactory: this.data.multiArray[1][this.data.multiIndex[1]],
@@ -39,23 +56,23 @@ Page({
       capacity_of_passengers: e.detail.value.capacity_of_passengers,
       price_jet: e.detail.value.price_jet,
       available_start_date: this.data.start_date,
-      available_end_date: this.data.end_date
+      available_end_date: this.data.end_date,
+       photo: file.url()
     }
-    // wrap user and submission data as an object
-    let request = Object.assign(user, jet)
-
-    // 
-    wx.request({
-      url: 'https://cloud-suite.herokuapp.com/api/v1/jets',
-      method: 'POST',
-      data: request,
-      success(res) {
-        // get api response with jet's id, to navigateTo show page
-        wx.navigateTo({
-          url: `/pages/show/show?id=${res.data.id}`
-        });
-      }
-    });
+          // wrap user and submission data as an object
+          let request = Object.assign(user, jet)
+          wx.request({
+            url: 'https://cloud-suite.herokuapp.com/api/v1/jets',
+            method: 'POST',
+            data: request,
+            success(res) {
+              // get api response with jet's id, to navigateTo show page
+              wx.navigateTo({
+                url: `/pages/show/show?id=${res.data.id}`
+              });
+            }
+          });
+        }).catch(console.error)
   },
   // picker for start & end date
   bindStartDateChange: function (e) {
