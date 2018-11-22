@@ -32,9 +32,10 @@ Page({
       }
     }
     let jet = {
-      model: e.detail.value.model,
-      manufactory: e.detail.value.manufactory,
-      location: e.detail.value.location,
+      // get user input from 'e', get picker data from page data
+      model: this.data.multiArray[0][this.data.multiIndex[0]],
+      manufactory: this.data.multiArray[1][this.data.multiIndex[1]],
+      location: this.data.location[this.data.index],
       capacity_of_passengers: e.detail.value.capacity_of_passengers,
       price_jet: e.detail.value.price_jet,
       available_start_date: this.data.start_date,
@@ -56,7 +57,7 @@ Page({
       }
     });
   },
-
+  // picker for start & end date
   bindStartDateChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
@@ -70,14 +71,14 @@ Page({
       end_date: e.detail.value
     })
   },
-
+  // picker for model & manyfactory
   bindMultiPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       multiIndex: e.detail.value
     })
   },
-
+  // picker for location
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
