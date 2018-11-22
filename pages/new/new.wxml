@@ -15,11 +15,38 @@
   <form bindsubmit="bindFormSubmit">
   
   <view class="section">
-    <input name='model' placeholder='model'></input>
-    <input name='manufactory' placeholder='manufactory'></input>
-    <input name='location' placeholder='parking airport'></input>
-    <input name='capacity_of_passengers' placeholder='capacity'></input>   
+    
+    <input name='price_jet' placeholder='$ price per hour'></input>
+    <input name='capacity_of_passengers' placeholder='capacity'></input>
 
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}"  range="{{multiArray}}">
+      <view>
+        <view wx:if="{{!multiIndex}}">model & Manufactory</view>
+        {{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}
+      </view>
+    </picker>
+
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{location}}">
+      <view>
+        <view wx:if="{{!index}}">parking airport</view>
+        {{location[index]}}
+      </view>
+    </picker>
+
+    <picker mode="date" value="{{start_date}}" start="2018-11-22" end="2019-11-22" bindchange="bindStartDateChange">
+      <view>
+        <view wx:if="{{!start_date}}">start date</view>
+        {{start_date}}
+      </view>
+    </picker>
+
+    <picker mode="date" value="{{end_date}}" start="2018-11-22" end="2019-11-22" bindchange="bindEndDateChange">
+      <view>
+        <view wx:if="{{!end_date}}">end date</view>
+        {{end_date}}
+      </view>
+    </picker>
+    
   </view> 
 
   <!-- Refer to the Github repository above if you want the complete form -->
