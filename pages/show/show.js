@@ -8,9 +8,13 @@ Page({
   
   },
   clicklink: function(e) {
-  
+    console.log(e)
+    const data = e.currentTarget.dataset;
+    const jet = data.jet;
+
     wx.navigateTo({
-      url: '/pages/confirmation/confirmation',
+      
+      url: `/pages/confirmation/confirmation?id=${jet}`,
       success: function(res) {},
       fail: function(res) {},
       complete: function(res) {},
@@ -34,6 +38,10 @@ Page({
           jet
         )
       },
+    })
+    let userId = wx.getStorageSync("userId")
+    this.setData({
+      userId: userId
     })
   },
 

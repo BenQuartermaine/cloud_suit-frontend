@@ -57,6 +57,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    const page = this
     // when page loads, get the user id & info from local storage and save to page data
     let page = this
     const userId = wx.getStorageSync("userId")
@@ -76,11 +77,19 @@ Page({
         )
       }
     })
-
   },
 
-  bindColorChange: function() {
-    console.log("hello")
+    wx.request({
+      url: `https://cloud-suite.herokuapp.com/api/v1/users/${userId}`,
+      method: "GET",
+      success(res) {
+        console.log(res)
+        const user = res.data
+        page.setData({
+          user: user
+        })
+      }
+    })
   },
 
   /**

@@ -13,14 +13,12 @@
   border-radius: 5px;
 }
 
-
-
 .bold {
   font-weight: bold;
 }
 
 /* Pricing, dates and description */
-.date-price {
+.date-price, picker {
   background:#FFFFFF;
   border:1px solid #E5E5E5;
   box-shadow:0px 2px 2px rgba(0, 0, 0, 0.25);
@@ -43,6 +41,8 @@
   display: flex;
   flex-direction: column;
   margin: 0px;
+  max-width:500rpx;
+
 }
 .model {
   background: #1D1F34;

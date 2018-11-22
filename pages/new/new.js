@@ -90,7 +90,7 @@ Page({
       end_date: e.detail.value
     })
   },
-  // picker for model & manyfactory
+  // picker for model & manufacture
   bindMultiPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({

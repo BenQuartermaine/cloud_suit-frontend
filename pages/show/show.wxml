@@ -2,8 +2,7 @@
 <!-- title and book plane button -->
 <view class='header-wrapper'>
   <text class='title'wx:if="{{model}}">{{model}}</text>
-  <text class='title'wx:else>Gulfstream G650</text>
-  <button class='book-button' bindtap="clicklink">Book</button>
+  <button class='book-button' bindtap="clicklink" wx:if="{{userId != user_id}}" data-jet="{{id}}">Book</button>
 </view>
 
 <!-- Image carousel -->
@@ -18,7 +17,7 @@
     <text>🛩 Price: USD {{price_jet}} per hour</text>
   </view>
   <view class='details-dates'>
-    <text>🛩 Availability: {{available_start_date}} -- {{available_end_date}}</text>
+    <text>🛩 Availability: {{available_start_date}} - {{available_end_date}}</text>
   </view>
    <view class='details-ppl'>
     <text>🛩 Max No. of Passenger: {{capacity_of_passengers}}</text>
