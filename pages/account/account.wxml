@@ -1,6 +1,6 @@
 <view class="statebar">
-  <view class="row top">
-    <view wx:for="{{statebar}}" data-idx="{{index}}" class="item {{currentState==index ? 'active' : ''}}" wx:key="unique" bindtap="stateTap">{{item}}</view>
+  <view class="row top small" >
+    <view id="small" wx:for="{{statebar}}" data-idx="{{index}}" class="item {{currentState==index ? 'active' : ''}}" wx:key="unique" bindtap="stateTap">{{item}}</view>
   </view>
 
 <view hidden="{{currentState!==0}}">
