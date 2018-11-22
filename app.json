@@ -8,7 +8,8 @@
     "pages/confirmation/confirmation",
     "pages/reviews/reviews",
     "pages/sumbitReview/sumbitReview",
-    "pages/new/new"
+    "pages/new/new",
+    "pages/landing/landing"
   ],
   "window":{
     "backgroundTextStyle":"light",
