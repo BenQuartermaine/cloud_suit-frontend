@@ -8,7 +8,7 @@
 
 <!-- Image carousel -->
 <view class='image-wrapper'>
-  <image src="http://buzzghana.com/wp-content/uploads/2013/12/Airbus-319-Corporate-Jet-Owner-Vijay-Mallya-2.jpg"></image>
+  <image src="{{photo}}"></image>
 </view>
 
 <!-- Details of jet section, currently only includes description -->

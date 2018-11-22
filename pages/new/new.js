@@ -1,56 +1,71 @@
 // pages/list/list.js
+
+const app = getApp()
+const AV = require('../../utils/av-weapp-min.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tempFilePaths: "/images/upload.png"
-    
+    // set the upload pic image
+    tempFilePaths: '/images/upload.png'
   },
 
-  buttonClicked: function () {
+  imageClicked: function() {
     var page = this;
     wx.chooseImage({
-      count: 9,
+      count: 1,
       sizeType: ['original', 'compressed'],
       sourceType: ['album', 'camera'],
       success(res) {
-        const tempFilePaths = res.tempFilePaths;
-        page.setData({ tempFilePaths })
+        page.setData({
+          tempFilePaths: res.tempFilePaths
+        }) 
       }
     })
   },
 
   bindFormSubmit: function (e) {
+    //upload pics to LeanCloud
+      new AV.File('file-name', {
+        blob: {
+          uri: this.data.tempFilePaths[0],
+        },
+      }).save().then(
+        function(file) {
+          //got url from LeanCloud
+          console.log(file.url())
     // get user id from local storage
-    let userId = wx.getStorageSync("userId")
-    let user = {
-      user: {
-        id: userId
-      }
-    }
-    let jet = {
-      model: e.detail.value.model,
-      manufactory: e.detail.value.manufactory,
-      location: e.detail.value.location,
-      capacity_of_passengers: e.detail.value.capacity_of_passengers
-    }
-    // wrap user and submission data as an object
-    let request = Object.assign(user, jet)
+          let userId = wx.getStorageSync("userId")
+          let user = {
+            user: {
+              id: userId
+            }
+          }
+          let jet = {
+            model: e.detail.value.model,
+            manufactory: e.detail.value.manufactory,
+            location: e.detail.value.location,
+            capacity_of_passengers: e.detail.value.capacity_of_passengers,
+            photo: file.url()
+          }
+          // wrap user and submission data as an object
+          let request = Object.assign(user, jet)
+          wx.request({
+            url: 'https://cloud-suite.herokuapp.com/api/v1/jets',
+            method: 'POST',
+            data: request,
+            success(res) {
+              // get api response with jet's id, to navigateTo show page
+              wx.navigateTo({
+                url: `/pages/show/show?id=${res.data.id}`
+              });
+            }
+          });
+        }).catch(console.error)
 
-    // 
-    wx.request({
-      url: 'https://cloud-suite.herokuapp.com/api/v1/jets',
-      method: 'POST',
-      data: request,
-      success(res) {
-        // get api response with jet's id, to navigateTo show page
-        wx.navigateTo({
-          url: `/pages/show/show?id=${res.data.id}`
-        });
-      }
-    });
   },
   /**
    * 生命周期函数--监听页面加载
