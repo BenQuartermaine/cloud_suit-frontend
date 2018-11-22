@@ -32,6 +32,7 @@ Page({
 
   bindFormSubmit: function (e) {
     //upload pics to LeanCloud
+    const page = this
       new AV.File('file-name', {
         blob: {
           uri: this.data.tempFilePaths[0],
@@ -48,17 +49,18 @@ Page({
               id: userId
             }
           }
+          console.log(page.data)
           let jet = {
       // get user input from 'e', get picker data from page data
-      model: this.data.multiArray[0][this.data.multiIndex[0]],
-      manufactory: this.data.multiArray[1][this.data.multiIndex[1]],
-      location: this.data.location[this.data.index],
-      capacity_of_passengers: e.detail.value.capacity_of_passengers,
-      price_jet: e.detail.value.price_jet,
-      available_start_date: this.data.start_date,
-      available_end_date: this.data.end_date,
-       photo: file.url()
-    }
+            model: page.data.multiArray[0][page.data.multiIndex[0]],
+            manufactory: page.data.multiArray[1][page.data.multiIndex[1]],
+            location: page.data.location[page.data.index],
+            capacity_of_passengers: e.detail.value.capacity_of_passengers,
+            price_jet: e.detail.value.price_jet,
+            available_start_date: page.data.start_date,
+            available_end_date: page.data.end_date,
+            photo: file.url()
+          }
           // wrap user and submission data as an object
           let request = Object.assign(user, jet)
           wx.request({
