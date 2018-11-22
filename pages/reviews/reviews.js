@@ -7,6 +7,20 @@ Page({
   data: {
     reviews: ["💛", "💛💛", "💛💛💛", "💛💛💛💛", "💛💛💛💛💛"],
   },
+
+  reviewsuccess: function () {
+    wx.showModal({
+      title: 'Review submitted successfully',
+      confirmText: "Great!",
+      confirmColor: '#931621',
+      showCancel: false,
+      success: function (res) {
+        wx.switchTab({
+          url: '../account/account'
+        })
+      },
+    })
+  },
   
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -83,11 +97,4 @@ Page({
   onReachBottom: function () {
   
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

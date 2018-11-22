@@ -4,7 +4,7 @@
 
     <view class="h1">Cloud Suite</view>
     <view class="h2">Your Personal Suite in the Air</view>
-    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
+    <button bindtap='reviewsuccess'open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
 
   </view>
 </view>
