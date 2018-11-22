@@ -35,7 +35,6 @@
 			"list": []
 		},
 		"miniprogram": {
-
 			"current": 8,
 			"list": [
 				{
@@ -82,12 +81,14 @@
 				},
 				{
 					"id": -1,
+					"name": "confirmation page",
+					"pathName": "pages/confirmation/confirmation",
+					"query": ""
 				},
 				{
-					"id": 8,
-					"name": "review",
-					"pathName": "pages/reviews/reviews",
-					"query": ""
+					"id": -1,
+					"name": "reviews",
+					"pathName": "pages/reviews/reviews"
 				}
 			]
 		}

@@ -21,11 +21,14 @@
     <view class="section-title">Rating</view>
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{reviews}}">
     <view class="picker">
-      <view wx:if="{{!index}}">💛 ?</view>
+      <view wx:if="{{!index}}">💛 </view>
       {{reviews[index]}}
     </view>
     </picker>
     </view>
+
+
+
 
 
     <button  style="margin-bottom:50px "form-type="submit" loading="{{loading}}">Submit</button>
