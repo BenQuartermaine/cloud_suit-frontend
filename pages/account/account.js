@@ -6,8 +6,51 @@ Page({
    */
 
   data: {
-  
+    //content for navbar
+    statebar: ['My Plane', 'My Trips'],
+    currentState: 0,
+    navbar: ['Upcoming', 'History'],
+    currentTab: 0,
+
+    fakie: [{
+      model: "GX1000 Jet",
+      description: "Best plane i've ever been in, period.",
+      price: "$6000",
+      name: "Benoit Jeremy"
+    }, {
+        model: "GX9000 Plane",
+        description: "Best plane i've ever been in, period.",
+        price: "$6000",
+        name: "Samuel Jackson"
+      },
+      {
+        model: "Boeing 747",
+        description: "Very big plane for lots of your friends.",
+        price: "$6000",
+        name: "Sarah Kennedy"
+      },
+    ]
   },
+  //MyPlanesMyTrips
+  stateTap: function (e) {
+    this.setData({
+      currentState: e.currentTarget.dataset.idx
+    })
+  },
+ //UpcomingHistory
+  navbarTap: function (e) {
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
+    })
+  },
+
+
+
+// Switcher function
+  switch1Change: function (e) {
+    console.log('a change event occurred on switch1, with the value of', e.detail.value)
+  },
+
   //事件处理函数
   
   /**
@@ -22,6 +65,10 @@ Page({
       userId: userId,
       userInfo: userInfo
     })
+  },
+
+  bindColorChange: function() {
+    console.log("hello")
   },
 
   /**
