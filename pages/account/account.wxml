@@ -1,33 +1,30 @@
 <!--pages/account/account.wxml-->
+
+<!-- list and state operator functionality -->
+<view class='navbar-wrapper'>
+  <view class='list-button'>
+    <button bindtap="buttonLink">List</button>
+  </view>
+  
+  <view class="state-wrapper">
+      <view class="planes-trips my-planes">My Planes</view>
+      <view class="planes-trips my-trips">My Trips</view>
+  </view>
+</view>
+
+<!-- user information and avatar -->
 <view class="userinfo">
   <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
   <text class="userinfo-nickname">{{userInfo.nickName}}</text>
 </view>
 
-
-
-  <view class="wrapper">
-  <view class="row">
-    <view class="renter">My Planes</view>
-    <view class="rentee">My Trips</view>
-  </view>
-  
- <!-- <view class="row">
-   <view class="upcoming">Upcoming</view>
-   <view class="history">History</view>
- </view> -->
-
-
-  <text class="tag-line">Your Personal Suite in the Air</text>
-
-    <button bindtap="buttonLink">List</button>
-  <!-- <view class="row">
-    <view class="upcoming">Upcoming</view>
-    <view class="history">History</view>
-  </view> -->
-  <view class="banner">
-  <!-- <image src="../../images/sky2.jpg"> -->
-  <!-- </image> -->
- </view>
+<!-- upcoming and history slider -->
+<view class="trips-wrapper">
+  <view class="up-hist upcoming">Upcoming</view>
+  <view class="up-hist history">History</view>
 </view>
+
+<!-- reviews & upcoming trips section -->
+
+  
 
