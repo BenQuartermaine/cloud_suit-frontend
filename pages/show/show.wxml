@@ -26,29 +26,28 @@
     <text class="upcase">Parking Airport: {{location}}</text>
   </view>
   </view>
-    
-
-
+  
 <!-- Reviews render———This is hard coded at the moment. Needs to be changed to dynamic-->
-
   <view class='description'>Reviews</view>
 <view class="message">
-  <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/benquartermaine"></image>
+  <view>
+    <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/benquartermaine"></image>
+  </view>
   <view class='body-wrapper'>
     <view class="message-name">
-      <text id= "name" class='name-date'>Gab Dehan | 2 months ago</text>
       <view wx:if="{{reviews.content}}">{{reviews.content}}</view> 
-      <view wx:else>Sooo much CAVIAR.</view>
+      <view wx:else>"This was an amazing aircraft with amazing crew. Would take again."</view>
     </view>
   </view>
 </view>
 <view class="message">
-  <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/yeehenchen"></image>
+<view>
+  <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/bellacally"></image>
+</view>
   <view class='body-wrapper'>
     <view class="message-name">
-      <text class='name-date'>Gab Dehan | 2 months ago</text>
-      <view wx:if="{{reviews.content}}">{{reviews.content}}</view> 
-      <view wx:else>Sooo much CAVIAR.</view>
+      <view wx:if="{{reviews.content}}">"{{reviews.content}}"</view> 
+      <view wx:else>"Sooo much CAVIAR."</view>
     </view>
   </view>
 </view>
