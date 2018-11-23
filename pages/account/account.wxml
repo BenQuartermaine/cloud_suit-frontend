@@ -105,23 +105,6 @@
 
 <!-- History tab when my trips is active -->
 <view hidden="{{currentShoot!==1}}">
-
-  <block wx:for="{{jet}}">
-  <view class="message">
-    <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/benquartermaine"></image>
-    <view class='body-wrapper'>
-      <view class="message-name">
-        <text class='name-date'>Gab Dehan | 2 months ago</text>
-        <view wx:if="{{reviews.content}}">{{reviews.content}}</view>
-        <view wx:else>1</view>
-      </view>
-    </view>
-  </view>
-  </block> 
-<view class='list-button'>
-    <button bindtap="reviewLink">Write a Review</button>
-  </view>
-</view> 
 <view class="message">
     <block wx:for="{{reservation_trip}}" wx:for-item="trip">
       
@@ -133,11 +116,10 @@
             </view>
           </view>
           <button class='review-button' bindtap="reviewLink" data-res="{{trip.id}}">Write a Review</button>
-
         </block>
-        <block wx:else></block>
-      
+        <!-- <block wx:else></block> -->  
     </block>
 
-  </view>
+</view>
+</view>
 </view>
