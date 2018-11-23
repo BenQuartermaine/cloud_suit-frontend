@@ -1,119 +1,102 @@
 <!--pages/account/account.wxml-->
 
-<!-- list and state operator functionality -->
+<!-- MyPlanes and MyTrips in Tab-Bar & List Button -->
 <view class='navbar-wrapper'>
   <view class='list-button'>
     <button bindtap="buttonLink">List</button>
   </view>
-</view>
-<!-- MyPlanes and MyTrips in Tab-Bar -->
-<view class="statebar">
-<text wx:for="{{statebar}}" data-idx="{{index}}" class="item {{currentState==index ? 'active' : ''}}" wx:key="unique" bindtap="stateTap">{{item}}</text>
+
+  <view class="statebar">
+    <text wx:for="{{statebar}}" data-idx="{{index}}" class="item {{currentState==index ? 'active' : ''}}" wx:key="unique" bindtap="stateTap">{{item}}</text>
+  </view>
 </view>
 
+<!-- Avatar & Nickname -->
 
-<view hidden="{{currentState!==0}}">
   <view class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
 
-<!-- upcoming and history slider in Tab-Bar -->
-<view class="navbar">
-  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
-</view>
-
-<view hidden="{{currentTab!==0}}">
-  tab_01
-  <block wx:for="{{jets}}" wx:for-item="jet">
-   <view class="message">
-   <text> {{jet.model}}</text>
-   <block wx:for="{{jet.reservation_plane}}" wx:for-item="plane">
-    <text> {{plane.start_date}} to {{plane.end_date}}</text>
-    <text>Total: {{plane.total_price}}</text>
-   </block>
+  <!-- Upcoming and history slider in Tab-Bar below avatar & nickname -->
+<view hidden="{{currentState!==0}}">
+  <view class='navbar'>
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
   </view>
-  </block>
 </view>
 
-<view hidden="{{currentTab!==1}}">
-  <!-- <block wx:if="{{jet}}">
- <block wx:for="{{jet}}">
+
+
+
+  <!-- upcoming and history slider in Tab-Bar -->
+  <view hidden="{{currentState!==1}}">
+    <view class="navbar">
+      <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+    </view>
+</view>
+
+
+<!-- Card display — Upcoming tab when My Plane is active -->
+<view hidden="{{currentTab!==0}}">
+  <!-- <block wx:for="{{jet}}"> -->
   <view class="message">
-    <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/{{jet.name}}"></image>
+    <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/benquartermaine"></image>
     <view class='body-wrapper'>
       <view class="message-name">
         <text class='name-date'>Gab Dehan | 2 months ago</text>
-        <view wx:if="{{reviews.content}}">{{reviews.content}}</view> 
-        <view wx:else>Sooo much CAVIAR.</view>
+        <view wx:if="{{reviews.content}}">{{reviews.content}}</view>
+        <view wx:else>4</view>
       </view>
     </view>
   </view>
- </block>
-</block>  -->
+  <!-- </block>  -->
+</view>
 
-<!-- <block wx:else="{{fakie}}">
- <block wx:for="{{fakie}}" wx:for-item="fake">
+<!-- Card display — History tab when my plane is highlighted -->
+<view hidden="{{currentTab!==1}}">
+  <!-- <block wx:for="{{jet}}"> -->
   <view class="message">
-    <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/{{fake.name}}"></image>
+    <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/benquartermaine"></image>
     <view class='body-wrapper'>
       <view class="message-name">
-        <text class='name-date'>{{fake.name}} | 2 months ago</text>
-        <view wx:if="{{fake.description}}">{{fake.description}}</view> 
-        <view wx:else>Sooo much CAVIAR.</view>
+        <text class='name-date'>Gab Dehan | 2 months ago</text>
+        <view wx:if="{{reviews.content}}">{{reviews.content}}</view>
+        <view wx:else>3</view>
       </view>
     </view>
   </view>
- </block>
-</block> -->
-history🍹
-<block wx:for="{{jets}}" wx:for-item="jet">
-   <view class="message">
-   <text> {{jet.model}}</text>
-   <block wx:for="{{jet.reservation_plane}}" wx:for-item="plane">
-    <text> {{plane.start_date}} to {{plane.end_date}}</text>
-    <text>Total: {{plane.total_price}}</text>
-   </block>
-  </view>
-  </block>
-</view>
+  <!-- </block>  -->
 </view>
 
-<view hidden="{{currentState!==1}}">
 
-<view class="userinfo">
-  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-</view>
-
-<!-- upcoming and history slider in Tab-Bar -->
-<view class="navbar">
-<text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
-</view>
+<!-- Upcoming tab when my trips is active -->
 <view hidden="{{currentTab!==0}}">
-  tab_01
-  <block wx:for="{{reservation_trip}}" wx:for-item="trip">
-   <view class="message">
-   <text> {{trip.model}}</text>
-    <text> {{trip.start_date}} to {{trip.end_date}}</text>
-    <text>Total: {{trip.total_price}}</text>
+  <!-- <block wx:for="{{jet}}"> -->
+  <view class="message">
+    <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/benquartermaine"></image>
+    <view class='body-wrapper'>
+      <view class="message-name">
+        <text class='name-date'>Gab Dehan | 2 months ago</text>
+        <view wx:if="{{reviews.content}}">{{reviews.content}}</view>
+        <view wx:else>2</view>
+      </view>
+    </view>
   </view>
-  </block>
+  <!-- </block>  -->
 </view>
 
-<view hidden="{{currentTab!==1}}"> 
-tab_02
-  <block wx:for="{{reservation_trip}}" wx:for-item="trip">
-   <view class="message">
-   <text> {{trip.model}}</text>
-    <text> {{trip.start_date}} to {{trip.end_date}}</text>
-    <text>Total: {{trip.total_price}}</text>
+<!-- History tab when my trips is active -->
+<view hidden="{{currentTab!==1}}">
+  <!-- <block wx:for="{{jet}}"> -->
+  <view class="message">
+    <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/benquartermaine"></image>
+    <view class='body-wrapper'>
+      <view class="message-name">
+        <text class='name-date'>Gab Dehan | 2 months ago</text>
+        <view wx:if="{{reviews.content}}">{{reviews.content}}</view>
+        <view wx:else>1</view>
+      </view>
+    </view>
   </view>
-  </block>
+  <!-- </block>  -->
 </view>
-
-</view>
-
-
-  
-
