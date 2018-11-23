@@ -111,20 +111,29 @@ margin: 20rpx 10rpx 0rpx 0rpx;
   color: rgba(0,0,0,0.7);
 }
 //MyPlanesTrips styling
-.statebar{
+.statebar {
   display: flex;
   justify-content: center;
   background: #fff;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
 }
-.statebar .item{
+.statebar .item { 
   position: relative;
   flex: auto;
   text-align: center;
   line-height: 80rpx;
+  background: #FCFCFC;
+  border: 1px solid #1D1F34;
+  font-size: 30rpx;
+  padding: 10rpx;
+  margin-top: 20rpx;
 }
-.statebar .item.active{
+.statebar .item.active {
   background: #1D1F34;
   color: #fff;
+  font-size: 30rpx;
+  padding: 10rpx;
 }
 .statebar .item.active:after{
   content: "";
@@ -137,25 +146,32 @@ margin: 20rpx 10rpx 0rpx 0rpx;
 }
 
 //UpcomingHistory styling
-.navbar{
+
+.navbar-wrapper {
   display: flex;
-  justify-content: center;
-  background: #fff;
+  align-self: center;
+  margin-left: 100px;
+  padding: 30px;
 }
+.navbar {
+ 
+}
+
 .navbar .item{
-  position: relative;
-  flex: auto;
-  text-align: center;
   line-height: 80rpx;
+  background: #FCFCFC;
+  border: 1px solid #1D1F34;
+  font-size: 30rpx;
+  padding: 10rpx;
 }
 .navbar .item.active{
   background: #1D1F34;
   color: #fff;
+  font-size: 30rpx;
+  padding: 10rpx;
 }
 .navbar .item.active:after{
   content: "";
-  display: block;
-  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
