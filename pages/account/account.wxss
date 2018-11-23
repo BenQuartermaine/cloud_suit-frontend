@@ -177,4 +177,34 @@ margin: 20rpx 10rpx 0rpx 0rpx;
   right: 0;
   height: 4rpx;
 }
+//////
+.shootbar-wrapper {
+  display: flex;
+  align-self: center;
+  margin-left: 100px;
+  padding: 30px;
+}
+.shootbar {
+ 
+}
 
+.shootbar .item{
+  line-height: 80rpx;
+  background: #FCFCFC;
+  border: 1px solid #1D1F34;
+  font-size: 30rpx;
+  padding: 10rpx;
+}
+.shootbar .item.active{
+  background: #1D1F34;
+  color: #fff;
+  font-size: 30rpx;
+  padding: 10rpx;
+}
+.shootbar .item.active:after{
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rpx;
+}
