@@ -59,6 +59,7 @@
     <view class="card-category">{{jet.capacity_of_passengers}}</view>
     <view class="card-category">{{jet.available_start_date}}</view>
     <view class="card-category">{{jet.available_end_date}}</view>
+    <image class="userinfo-avatar" src="{{jet.avatarurl}}" mode="cover"></image>
     </view>
   </view>
 </view>
