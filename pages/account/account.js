@@ -13,24 +13,6 @@ Page({
     currentTab: 0,
     shootbar: ['Upcoming', 'History'],
     currentShoot: 0,
-    // fakie: [{
-    //   model: "GX1000 Jet",
-    //   description: "Best plane i've ever been in, period.",
-    //   price: "$6000",
-    //   name: "Benoit Jeremy"
-    // }, {
-    //     model: "GX9000 Plane",
-    //     description: "Best plane i've ever been in, period.",
-    //     price: "$6000",
-    //     name: "Samuel Jackson"
-    //   },
-    //   {
-    //     model: "Boeing 747",
-    //     description: "Very big plane for lots of your friends.",
-    //     price: "$6000",
-    //     name: "Sarah Kennedy"
-    //   },
-    // ]
   },
   //MyPlanesMyTrips
   stateTap: function (e) {
