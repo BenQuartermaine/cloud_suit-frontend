@@ -27,10 +27,12 @@
   font-size: 48rpx;
   font-weight: bold;
 }
+.image-wrapper {
+  
+}
 .image-wrapper image {
   height: 500rpx;
   border-radius: 5px;
-  width: 100vw;
 }
 .details-wrapper {
   background: #FFFFFF;
@@ -85,7 +87,3 @@
   font-size: 13px;
   color: rgba(0,0,0,0.7);
 }
-
-
-
-
