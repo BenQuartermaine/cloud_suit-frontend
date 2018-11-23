@@ -5,16 +5,37 @@ Page({
   },
   // picker for start & end date
   bindStartDateChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      start_date: e.detail.value
+      start_date: e.detail.value,
+    })
+
+    const data = this.data
+    let total_price = 0
+    if (data.end_date) {
+      let dend = new Date(data.end_date).getTime()
+      let dstart = new Date(data.start_date).getTime()
+      console.log(data.price_jet)
+      total_price = data.price_jet * (dend - dstart) / 86400000
+    }
+    this.setData({
+      total_price: total_price
     })
   },
 
-  bindEndDateChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
+  bindEndDateChange: function (e) {   
     this.setData({
-      end_date: e.detail.value
+      end_date: e.detail.value,
+    })
+
+    const data = this.data
+    let total_price = 0
+    if (data.start_date) {
+      let dend = new Date(data.end_date).getTime()
+      let dstart = new Date(data.start_date).getTime()
+      total_price = data.price_jet * (dend - dstart) / 86400000
+    }
+    this.setData({
+      total_price: total_price
     })
   },
 // Modal pop up on successful booking
