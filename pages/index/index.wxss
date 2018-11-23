@@ -30,13 +30,10 @@
   border-radius: 50%;
 }
 .card-category {
-  font-size: 30rpx;
-  font-weight: bolder;
-  top: 10px;
-  left: 10px;
+  font-size: 40rpx;
   text-transform: uppercase;
-  padding-top:20rpx;
-}
+  font-weight: bolder;
+
 .card-description {
   display: flex;
   justify-content: center;
