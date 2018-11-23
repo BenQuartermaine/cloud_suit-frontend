@@ -54,7 +54,11 @@
   bindtap="showJet"
   data-jet="{{jet}}">
     <view class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url({{jet.photo}});">
-        <view class="card-category">{{jet.model}}</view>
+    <view class="card-category">{{jet.model}}</view>
+    <view class="card-category">{{jet.location}}</view>
+    <view class="card-category">{{jet.capacity_of_passengers}}</view>
+    <view class="card-category">{{jet.available_start_date}}</view>
+    <view class="card-category">{{jet.available_end_date}}</view>
     </view>
   </view>
 </view>
