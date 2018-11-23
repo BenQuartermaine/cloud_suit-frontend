@@ -11,7 +11,6 @@
   </view>
 </view>
 
-<!-- Ｍyplane  -->
 <view hidden="{{currentState!==0}}">
   <view class= 'userinfo' >
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
@@ -20,8 +19,11 @@
 
 
   <view class='navbar'>
-    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+    <view class='navbar-one'>
+      <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+    </view>
   </view>
+
 
 <!-- Card display — Upcoming tab when My Plane is active -->
 <view hidden="{{currentTab!==0}}">
@@ -104,8 +106,8 @@
 <!-- History tab when my trips is active -->
 <view hidden="{{currentShoot!==1}}">
 
-  <!-- <block wx:for="{{jet}}"> -->
-  <!-- <view class="message">
+  <block wx:for="{{jet}}">
+  <view class="message">
     <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/benquartermaine"></image>
     <view class='body-wrapper'>
       <view class="message-name">
@@ -115,11 +117,11 @@
       </view>
     </view>
   </view>
-  <!-- </block>  -->
-  <!-- <view class='list-button'>
+  </block> 
+<view class='list-button'>
     <button bindtap="reviewLink">Write a Review</button>
   </view>
-</view>  -->
+</view> 
 <view class="message">
     <block wx:for="{{reservation_trip}}" wx:for-item="trip">
       
@@ -136,8 +138,6 @@
         <block wx:else></block>
       
     </block>
-   
-     
-  </view>
+
   </view>
 </view>

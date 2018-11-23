@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    reviews: ["💛", "💛💛", "💛💛💛", "💛💛💛💛", "💛💛💛💛💛"],
+    reviews: ["💛💛💛💛💛", "💛💛💛💛", "💛💛💛", "💛💛", "💛" ],
   },
 
   reviewsuccess: function () {
@@ -60,6 +60,7 @@ Page({
   onLoad: function (options) {
     const userInfo = wx.getStorageSync("userInfo");
     this.setData({
+
       avatarUrl: userInfo.avatarUrl,
       resid: options.id
     });
@@ -81,7 +82,7 @@ Page({
     //   })
     // };
 
-   
+
   },
 
   /**
