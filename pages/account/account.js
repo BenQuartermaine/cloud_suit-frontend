@@ -7,11 +7,12 @@ Page({
 
   data: {
     //content for navbar
-    statebar: ['My Plane', 'My Trips'],
+    statebar: ['My Planes', 'My Trips'],
     currentState: 0,
     navbar: ['Upcoming', 'History'],
     currentTab: 0,
-
+    shootbar: ['Upcoming', 'History'],
+    currentShoot: 0,
     // fakie: [{
     //   model: "GX1000 Jet",
     //   description: "Best plane i've ever been in, period.",
@@ -44,6 +45,12 @@ Page({
     })
   },
 
+  shootTap: function (e) {
+    this.setData({
+      currentShoot: e.currentTarget.dataset.idx
+    })
+  },
+ 
 
 
 // Switcher function
@@ -76,6 +83,7 @@ Page({
         )
       }
     })
+    console.log(this.data)
   },
 
   /**
