@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    reviews: ["💛", "💛💛", "💛💛💛", "💛💛💛💛", "💛💛💛💛💛"],
+    reviews: ["💛💛💛💛💛", "💛💛💛💛", "💛💛💛", "💛💛", "💛" ],
   },
 
   reviewsuccess: function () {
@@ -41,23 +41,7 @@ Page({
     const userInfo = wx.getStorageSync("userInfo");
     this.setData({
       avatarUrl: userInfo.avatarUrl
-    });
-
-    // in_xin: function(e) {
-    //   var in_xin = e.currentTarget.dataset.in;
-    //   var one_2;
-    //   if (in_xin === 'use_sc2') {
-    //     one_2 = Number(e.currentTarget.id);
-    //   } else {
-    //     one_2 = Number(e.currentTarget.id) + this.data.one_2;
-    //   }
-    //   this.setData({
-    //     one_2: one_2,
-    //     two_2: 5 - one_2
-    //   })
-    // };
-
-   
+    });   
   },
 
   /**
