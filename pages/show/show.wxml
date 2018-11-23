@@ -26,11 +26,8 @@
     <text>Current Parking Airport: {{location}}</text>
   </view>
   </view>
-    
-
-
+  
 <!-- Reviews render———This is hard coded at the moment. Needs to be changed to dynamic-->
-
   <view class='description'>Reviews</view>
 <view class="message">
   <view>
