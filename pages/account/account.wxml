@@ -63,7 +63,7 @@
       </block>
     </block>
  
-    <button class='review-button' bindtap="reviewLink">Write a Review</button>
+   
  
   </view>
  
@@ -123,19 +123,21 @@
   </view>
 </view> 
 <view class="message">
-    <block wx:for="{{jets}}" wx:for-item="jet">
-      <block wx:for="{{jet.reservation_plane}}" wx:for-item="plane">
-        <block wx:if="{{plane.status}}">
+    <block wx:for="{{reservation_trip}}" wx:for-item="trip">
+      
+        <block wx:if="{{trip.status}}">
           <view class='body-wrapper'>
             <view class="message-name">
-              <text class='name-date'>{{jet.model}}</text>
-              <text class='name-date'>{{plane.start_date}} to {{plane.end_date}}</text>
+              <text class='name-date'>{{trip.model}}</text>
+              <text class='name-date'>{{trip.start_date}} to {{trip.end_date}}</text>
             </view>
           </view>
+          <button class='review-button' bindtap="reviewLink" data-res="{{trip.id}}">Write a Review</button>
+
         </block>
         <block wx:else></block>
-      </block>
+      
     </block>
-    <button class='review-button' bindtap="reviewLink">Write a Review</button>
+
   </view>
 </view>
