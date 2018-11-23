@@ -43,8 +43,6 @@ Page({
       userInfo: userInfo
     })
 
-    console.log(options)
-
     wx.request({
       url: `https://cloud-suite.herokuapp.com/api/v1/jets/${options.id}`,
       method: "GET",
@@ -56,6 +54,7 @@ Page({
         )
       }
     })
+    console.log(this.data)
   },
 
   submit: function () {
@@ -79,18 +78,20 @@ Page({
   // New Restaurant Submission
   bindFormSubmit: function (e) {
     let that = this
-
+    console.log(this.data)
     let r = {
       user: {
         id: this.data.userId
       },
-      
+      reservation: {
         start_date: this.data.start_date,
         end_date: this.data.end_date,
         total_price: this.data.total_price
-      
+      }
+
+      // }
     }
-    
+    console.log(r)
     // Get api data
     wx.request({
       url: `https://cloud-suite.herokuapp.com/api/v1/jets/${that.data.id}/reservations`,
@@ -100,7 +101,8 @@ Page({
         // set data on index page and show
         wx.redirectTo({
           url: '/pages/account/account'
-        });
+        },
+        );
       }
     })
   },

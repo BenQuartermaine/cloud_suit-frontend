@@ -59,7 +59,6 @@ Page({
   onLoad: function (options) {
     const page = this
     // when page loads, get the user id & info from local storage and save to page data
-    let page = this
     const userId = wx.getStorageSync("userId")
     const userInfo = wx.getStorageSync("userInfo")
 
@@ -75,19 +74,6 @@ Page({
         page.setData(
           res.data
         )
-      }
-    })
-  },
-
-    wx.request({
-      url: `https://cloud-suite.herokuapp.com/api/v1/users/${userId}`,
-      method: "GET",
-      success(res) {
-        console.log(res)
-        const user = res.data
-        page.setData({
-          user: user
-        })
       }
     })
   },
