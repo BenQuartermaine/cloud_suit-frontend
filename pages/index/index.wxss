@@ -30,8 +30,9 @@
   border-radius: 50%;
 }
 .card-category {
-  font-size: 20rpx;
-  text-transform: capitalize;
+  font-size: 40rpx;
+  text-transform: uppercase;
+  font-weight: bolder;
 }
 .card-description {
   display: flex;
