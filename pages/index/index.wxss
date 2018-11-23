@@ -30,8 +30,12 @@
   border-radius: 50%;
 }
 .card-category {
-  font-size: 20rpx;
-  text-transform: capitalize;
+  font-size: 30rpx;
+  font-weight: bolder;
+  top: 10px;
+  left: 10px;
+  text-transform: uppercase;
+  padding-top:20rpx;
 }
 .card-description {
   display: flex;
@@ -73,7 +77,7 @@ picker {
 .background{
   background-size: cover;
   height:500rpx;
-  padding-top:80rpx;
+  padding-top:60rpx;
 }
 .formcontainer{
   width:90%;
@@ -108,4 +112,9 @@ picker {
   padding: 15rpx 250rpx;
   display: inline;
   border-radius: 10rpx;
+}
+
+.card-avatar{
+  width: 50rpx;
+  border-radius: 50%;
 }
