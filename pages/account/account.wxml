@@ -26,8 +26,6 @@
 </view>
 
 
-
-
   <!-- upcoming and history slider in Tab-Bar -->
   <view hidden="{{currentState!==1}}">
     <view class="navbar">
@@ -44,8 +42,15 @@
     <view class='body-wrapper'>
       <view class="message-name">
         <text class='name-date'>Gab Dehan | 2 months ago</text>
-        <view wx:if="{{reviews.content}}">{{reviews.content}}</view>
-        <view wx:else>4</view>
+        
+        <view wx:if="{{status}}">
+          <view class="btn-area">
+          <navigator url="/page/reviews/reviews" hover-class="navigator-hover">Review</navigator>
+          </view>
+        </view>
+
+        <!-- <view wx:if="{{reviews.content}}">{{reviews.content}}</view>
+        <view wx:else>4</view> -->
       </view>
     </view>
   </view>
@@ -60,8 +65,15 @@
     <view class='body-wrapper'>
       <view class="message-name">
         <text class='name-date'>Gab Dehan | 2 months ago</text>
-        <view wx:if="{{reviews.content}}">{{reviews.content}}</view>
-        <view wx:else>3</view>
+        <!-- <view wx:if="{{reviews.content}}">{{reviews.content}}</view>
+        <view wx:else>3</view> -->
+        
+         <block wx:if = "{{status}}">
+          <view class="btn-area">
+          <navigator url="/page/reviews/reviews" hover-class="navigator-hover">Review</navigator>
+          </view>
+        </block>
+
       </view>
     </view>
   </view>

@@ -14,16 +14,16 @@
 <view class='description'>Details</view>
 <view class='details-wrapper'>
   <view class='details-price'>
-    <text>Price: USD {{price_jet}} per hour</text>
+    <text class="upcase">Price: USD {{price_jet}}/hour</text>
   </view>
   <view class='details-dates'>
-    <text>Availability: {{available_start_date}} - {{available_end_date}}</text>
+    <text class="upcase">Availability: {{available_start_date}} - {{available_end_date}}</text>
   </view>
    <view class='details-ppl'>
-    <text>Max No. of Passenger: {{capacity_of_passengers}}</text>
+    <text class="upcase">Capacity: {{capacity_of_passengers}}</text>
   </view>
    <view class='details-location'>
-    <text>Current Parking Airport: {{location}}</text>
+    <text class="upcase">Parking Airport: {{location}}</text>
   </view>
   </view>
   
