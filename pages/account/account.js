@@ -140,9 +140,13 @@ Page({
       url: '/pages/new/new',
     })
   },
-  reviewLink: function () {
+  reviewLink: function (e) {
+    console.log(e)
+    const data = e.currentTarget.dataset;
+    const res = data.res;
+
     wx.redirectTo({
-      url: '/pages/reviews/reviews',
+      url: `/pages/reviews/reviews?id=${res}`,
     })
   }
 
