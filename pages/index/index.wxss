@@ -33,6 +33,7 @@
   font-size: 40rpx;
   text-transform: uppercase;
   font-weight: bolder;
+}
 
 .card-description {
   display: flex;
