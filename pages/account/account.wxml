@@ -62,7 +62,11 @@
         <block wx:else></block>
       </block>
     </block>
+ 
+    <button class='review-button' bindtap="reviewLink">Write a Review</button>
+ 
   </view>
+ 
   <!-- </block>  -->
 </view>
 </view>
@@ -101,8 +105,9 @@
 
 <!-- History tab when my trips is active -->
 <view hidden="{{currentShoot!==1}}">
+
   <!-- <block wx:for="{{jet}}"> -->
-  <view class="message">
+  <!-- <view class="message">
     <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/benquartermaine"></image>
     <view class='body-wrapper'>
       <view class="message-name">
@@ -113,6 +118,27 @@
     </view>
   </view>
   <!-- </block>  -->
-</view>
-
+  <!-- <view class='list-button'>
+    <button bindtap="reviewLink">Write a Review</button>
+  </view>
+</view>  -->
+<view class="message">
+    <block wx:for="{{jets}}" wx:for-item="jet">
+      <block wx:for="{{jet.reservation_plane}}" wx:for-item="plane">
+        <block wx:if="{{plane.status}}">
+          <view class='body-wrapper'>
+            <view class="message-name">
+              <text class='name-date'>{{jet.model}}</text>
+              <text class='name-date'>{{plane.start_date}} to {{plane.end_date}}</text>
+            </view>
+          </view>
+        </block>
+        <block wx:else></block>
+      </block>
+    </block>
+   
+    <button class='review-button' bindtap="reviewLink">Write a Review</button>
+ 
+  </view>
+  </view>
 </view>

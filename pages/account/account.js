@@ -139,5 +139,11 @@ Page({
     wx.redirectTo({
       url: '/pages/new/new',
     })
+  },
+  reviewLink: function () {
+    wx.redirectTo({
+      url: '/pages/reviews/reviews',
+    })
   }
+
 })

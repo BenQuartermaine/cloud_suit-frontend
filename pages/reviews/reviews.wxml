@@ -30,6 +30,7 @@
 
   <button bindtap='reviewsuccess'  style="margin-bottom:50px "form-type="submit" loading="{{loading}}">Submit</button>
   </form>
+  <button bindtap='backhome'  style="margin-bottom:50px "form-type="submit" loading="{{loading}}">Back</button>
 
 </view>
 </view>

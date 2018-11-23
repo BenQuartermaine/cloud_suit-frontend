@@ -25,7 +25,7 @@
   font-size: 30rpx;
   margin: 20rpx 0rpx 0rpx 10rpx;
 }
- 
+
  /* toggle between user states */
  .state-wrapper {
 display: flex;
@@ -85,6 +85,16 @@ margin: 20rpx 10rpx 0rpx 0rpx;
   border-radius: 3px; 
   margin: 10rpx;
 }
+
+ .review-button{
+  background: #872426;
+  border-radius: 50px;
+  color: white;
+  padding: 0rpx 10rpx;
+  font-size: 20rpx;
+  /* float: right; */
+  margin: 0 auto;
+ }
 .message:last-child {
   border-bottom: none;
 }
