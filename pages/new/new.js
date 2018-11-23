@@ -1,4 +1,4 @@
-// pages/list/list.js
+ // pages/list/list.js
 
 const app = getApp()
 const AV = require('../../utils/av-weapp-min.js');
