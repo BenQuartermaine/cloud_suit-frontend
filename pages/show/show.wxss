@@ -87,3 +87,12 @@
   font-size: 13px;
   color: rgba(0,0,0,0.7);
 }
+
+.upcase{
+  font-weight: bold;
+
+}
+
+#name{
+font-weight: bold;
+}
