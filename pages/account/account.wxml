@@ -13,17 +13,15 @@
 
 <!-- Ｍyplane  -->
 <view hidden="{{currentState!==0}}">
-
-  <!-- Avatar & Nickname -->
-  <view class="userinfo">
+  <view class= 'userinfo' >
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
 
+
   <view class='navbar'>
     <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
   </view>
-
 
 <!-- Card display — Upcoming tab when My Plane is active -->
 <view hidden="{{currentTab!==0}}">
