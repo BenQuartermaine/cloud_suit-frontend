@@ -7,33 +7,27 @@
 
 <!-- Image carousel -->
 <view class='image-wrapper'>
-  <image src="{{photo}}"></image>
+  <image class='card' src="{{photo}}"></image>
 </view>
 
 <!-- Details of jet section, currently only includes description -->
 <view class='description'>Details</view>
 <view class='details-wrapper'>
   <view class='details-price'>
-    <text>🛩 Price: USD {{price_jet}} per hour</text>
+    <text>Price: USD {{price_jet}} per hour</text>
   </view>
   <view class='details-dates'>
-    <text>🛩 Availability: {{available_start_date}} - {{available_end_date}}</text>
+    <text>Availability: {{available_start_date}} - {{available_end_date}}</text>
   </view>
    <view class='details-ppl'>
-    <text>🛩 Max No. of Passenger: {{capacity_of_passengers}}</text>
+    <text>Max No. of Passenger: {{capacity_of_passengers}}</text>
   </view>
    <view class='details-location'>
-    <text>🛩 Current Parking Airport: {{location}}</text>
+    <text>Current Parking Airport: {{location}}</text>
   </view>
   </view>
     
-  
-  <!-- <view>
-    <view class='amenities'>
-      <text>{{description}}</text>
-    </view> -->
-  <!-- </view>
-</view> -->
+
 
 <!-- Reviews render———This is hard coded at the moment. Needs to be changed to dynamic-->
 

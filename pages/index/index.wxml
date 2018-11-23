@@ -1,65 +1,59 @@
 <!--index.wxml-->
-<view class="background" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('/images/jet.jpg');">
+
+<view class='header'>
+  <view>Welcome to</view> 
+  <view class='bold'>CloudSuite</view>
+</view>
+
+<view class="background">
+  <!-- style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('/images/jet.jpg');" -->
   <view class="banner-content">
     <form bindtap='bindFormSubmit'>
       <view class='formcontainer'>
-
-        <!-- <view class="input-fields">
-          <input type="text" placeholder="From" bindinput="inputEvent"></input>
-        </view> -->
-           <picker bindchange="bindPickerChange" value="{{index}}" range="{{location}}">
-      <view>
-        <view wx:if="{{!index}}">From</view>
-        {{location[index]}}
-      </view>
-    </picker>
-
-        <!-- <view class="input-fields">
-          <input type="text" placeholder="To" bindinput="inputEvent"></input>
-        </view> -->
-
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{location}}">
+          <view>
+            <view wx:if="{{!index}}">From</view>
+            {{location[index]}}
+          </view>
+        </picker>
 
         <picker bindchange="bindPickerChange" value="{{index}}" range="{{location}}">
-      <view>
-        <view wx:if="{{!index}}">TO</view>
-        {{location[index]}}
-      </view>
-    </picker>
-      
+          <view>
+            <view class='center-placeholders' wx:if="{{!index}}">To</view>
+            {{location[index]}}
+          </view>
+        </picker>
+
         <picker mode="date" value="{{date}}" start="2018-11-22" end="2019-11-22" bindchange="bindDatePickerChange">
           <view>
             <view wx:if="{{!date}}">Date</view>
             {{date}}
           </view>
         </picker>
-        
-      <picker bindchange="bindTimePickerChange" value="{{index}}" range="{{array}}">
+
+        <picker bindchange="bindTimePickerChange" value="{{index}}" range="{{array}}">
+          <view>
+            <view wx:if="{{!index}}">No. Passengers</view>
+            {{array[index]}}
+          </view>
+        </picker>
         <view>
-          <view wx:if="{{!index}}">No. passengers</view>
-          {{array[index]}}
+          <button class="searchbar">search</button>
         </view>
-      </picker>
-      <view>
-      <button class="searchbar">search</button>
-      </view>
       </view>
     </form>
   </view>
 </view>
 
 <view class='card-wrap'>
-  <view wx:for="{{jets}}"
-  wx:for-item="jet"
-  wx:key="jet.id"
-  bindtap="showJet"
-  data-jet="{{jet}}">
+  <view wx:for="{{jets}}" wx:for-item="jet" wx:key="jet.id" bindtap="showJet" data-jet="{{jet}}">
     <view class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url({{jet.photo}});">
-    <view class="card-category">{{jet.model}}</view>
-    <view class="card-category">{{jet.location}}</view>
-    <view class="card-category">{{jet.capacity_of_passengers}}</view>
+      <view class="card-description">{{jet.location}}</view>
+      <view class="card-category">{{jet.model}}</view>
+      <!-- <view class="card-category">{{jet.capacity_of_passengers}}</view>
     <view class="card-category">{{jet.available_start_date}}</view>
-    <view class="card-category">{{jet.available_end_date}}</view>
-    <image class="userinfo-avatar" src="{{jet.avatarurl}}" mode="cover"></image>
+    <view class="card-category">{{jet.available_end_date}}</view> -->
+      <!-- <image class="userinfo-avatar" src="{{jet.avatarurl}}" mode="cover"></image> -->
     </view>
   </view>
 </view>
