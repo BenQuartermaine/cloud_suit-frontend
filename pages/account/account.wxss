@@ -115,8 +115,6 @@ margin: 20rpx 10rpx 0rpx 0rpx;
   height: 4rpx;
 }
 
-
-
 .navbar-wrapper {
   display: flex;
   align-self: center;
