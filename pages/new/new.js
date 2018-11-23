@@ -44,6 +44,7 @@ Page({
     // get user id from local storage
 
           let userId = wx.getStorageSync("userId")
+          const userInfo = wx.getStorageSync("userInfo")
           let user = {
             user: {
               id: userId
@@ -59,7 +60,8 @@ Page({
             price_jet: e.detail.value.price_jet,
             available_start_date: page.data.start_date,
             available_end_date: page.data.end_date,
-            photo: file.url()
+            photo: file.url(),
+            avatarurl: userInfo.avatarUrl
           }
           // wrap user and submission data as an object
           let request = Object.assign(user, jet)
