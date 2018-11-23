@@ -49,7 +49,7 @@ Page({
               id: userId
             }
           }
-          console.log(page.data)
+
           let jet = {
       // get user input from 'e', get picker data from page data
             model: page.data.multiArray[0][page.data.multiIndex[0]],
@@ -63,6 +63,7 @@ Page({
           }
           // wrap user and submission data as an object
           let request = Object.assign(user, jet)
+
           wx.request({
             url: 'https://cloud-suite.herokuapp.com/api/v1/jets',
             method: 'POST',

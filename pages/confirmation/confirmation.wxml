@@ -1,4 +1,4 @@
-<!--pages/confirmation/confirmation.wxml--> 
+<!--pages/confirmation/confirmation.wxml-->
 
 <!-- header section -->
 <view class='confirm-title'>
@@ -25,12 +25,12 @@
   </view>
 
   <!-- date display section -->
-   <form bindsubmit="bindFormSubmit">
+  <form bindsubmit="bindFormSubmit">
     <view class='plane-details'>
       <picker mode="date" value="{{start_date}}" start="2018-11-22" end="2019-11-22" bindchange="bindStartDateChange">
         <view>
           <view wx:if="{{!start_date}}">Departure date</view>
-          <view class="bold" wx:else>Departure:</view> 
+          <view class="bold" wx:else>Departure:</view>
           <view>{{start_date}}</view>
         </view>
       </picker>
@@ -38,7 +38,7 @@
       <picker mode="date" value="{{end_date}}" start="2018-11-22" end="2019-11-22" bindchange="bindEndDateChange">
         <view>
           <view wx:if="{{!end_date}}">Return date</view>
-          <view class="bold" wx:else>Return:</view> 
+          <view class="bold" wx:else>Return:</view>
           <view>{{end_date}}</view>
         </view>
       </picker>
@@ -51,9 +51,9 @@
     </view>
 
 
-<!-- confirm booking button -->
-  <view class='button-wrapper'>
-    <button bindtap='confirmation' formType="submit" class='book-button'>Confirm</button>
-  </view>
-</form>
-  </view>
+    <!-- confirm booking button -->
+    <view class='button-wrapper'>
+      <button bindtap='confirmation' formType="submit" class='book-button'>Confirm</button>
+    </view>
+  </form>
+</view>
