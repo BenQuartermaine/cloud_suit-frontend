@@ -3,20 +3,18 @@
   width:200rpx;
   height: 60rpx;
 } 
-
 .details {
 background: #1D1F34;
 border-radius: 4px 0px 0px 4px;
 color: white;
 }
-
 .confirm{
 background: #FCFCFC;
 border: 1px solid #1D1F34;
 box-sizing: border-box;
 border-radius: 0px 4px 4px 0px;
 }
- .row {
+.row {
   display: flex;
   justify-content: center;
   margin-top: 40rpx;
@@ -25,23 +23,18 @@ border-radius: 0px 4px 4px 0px;
 .background-image{
   height:500rpx;
   width: 750rpx;
-
 }
 
-button .wrapper{
+button {
   padding:16rpx 20rpx;
   background: #872426;
-  border-radius: 50rpx;
+  border-radius: 8rpx;
   color: white;
   font-family: roboto;
   font-size: 30rpx;
   width:33%;
 }
 
- /* .add{
-  margin-top: 40rpx;
-  margin-bottom: 40rpx;
-}  */
 .addphotos {
   display: flex;
   align-items: center;
@@ -69,8 +62,6 @@ button .wrapper{
   text-transform: capitalize;
   text-align: center;
   font-weight: bold;
-  
-
 }
  .placeholder {
   font-size: 12px;
@@ -87,7 +78,6 @@ button .wrapper{
   margin-top:30rpx;
   margin-bottom: 10rpx;
 }
-
 .section picker {
   color: #808284;  
   width: 35%;

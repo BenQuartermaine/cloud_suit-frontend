@@ -7,54 +7,47 @@
 
 <!-- Image carousel -->
 <view class='image-wrapper'>
-  <image src="{{photo}}"></image>
+  <image class='card' src="{{photo}}"></image>
 </view>
 
 <!-- Details of jet section, currently only includes description -->
 <view class='description'>Details</view>
 <view class='details-wrapper'>
   <view class='details-price'>
-    <text>🛩 Price: USD {{price_jet}} per hour</text>
+    <text class="upcase">Price:</text><text class='details-size'> USD {{price_jet}}/hour</text>
   </view>
   <view class='details-dates'>
-    <text>🛩 Availability: {{available_start_date}} - {{available_end_date}}</text>
+    <text class="upcase">Availability:</text><text class='details-size'> {{available_start_date}} - {{available_end_date}}</text>
   </view>
    <view class='details-ppl'>
-    <text>🛩 Max No. of Passenger: {{capacity_of_passengers}}</text>
+    <text class="upcase">Capacity:</text><text class='details-size'> {{capacity_of_passengers}}</text>
   </view>
    <view class='details-location'>
-    <text>🛩 Current Parking Airport: {{location}}</text>
+    <text class="upcase">Parking Airport: </text><text class='details-size'>{{location}}</text>
   </view>
   </view>
-    
   
-  <!-- <view>
-    <view class='amenities'>
-      <text>{{description}}</text>
-    </view> -->
-  <!-- </view>
-</view> -->
-
 <!-- Reviews render———This is hard coded at the moment. Needs to be changed to dynamic-->
-
   <view class='description'>Reviews</view>
 <view class="message">
-  <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/benquartermaine"></image>
+  <view>
+    <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/benquartermaine"></image>
+  </view>
   <view class='body-wrapper'>
     <view class="message-name">
-      <text class='name-date'>Gab Dehan | 2 months ago</text>
       <view wx:if="{{reviews.content}}">{{reviews.content}}</view> 
-      <view wx:else>Sooo much CAVIAR.</view>
+      <view wx:else>"This was an amazing aircraft with amazing crew. Would take again."</view>
     </view>
   </view>
 </view>
 <view class="message">
-  <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/yeehenchen"></image>
+<view>
+  <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/bellacally"></image>
+</view>
   <view class='body-wrapper'>
     <view class="message-name">
-      <text class='name-date'>Gab Dehan | 2 months ago</text>
-      <view wx:if="{{reviews.content}}">{{reviews.content}}</view> 
-      <view wx:else>Sooo much CAVIAR.</view>
+      <view wx:if="{{reviews.content}}">"{{reviews.content}}"</view> 
+      <view wx:else>"Sooo much CAVIAR."</view>
     </view>
   </view>
 </view>

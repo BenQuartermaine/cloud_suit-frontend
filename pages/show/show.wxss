@@ -30,7 +30,7 @@
 .image-wrapper image {
   height: 500rpx;
   border-radius: 5px;
-  width: 100vw;
+  width: 100%;
 }
 .details-wrapper {
   background: #FFFFFF;
@@ -86,6 +86,14 @@
   color: rgba(0,0,0,0.7);
 }
 
+.upcase{
+  font-weight: bold;
+}
+.details-size {
+  font-size: 25rpx;
+}
 
 
-
+#name{
+font-weight: bold;
+}

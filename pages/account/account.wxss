@@ -32,47 +32,10 @@ display: flex;
 justify-content: center;
 margin: 20rpx 10rpx 0rpx 0rpx;
 }
-.planes-trips {
-  padding: 20rpx 20rpx;
-  font-size: 25rpx;
- }
-.my-planes {
-  background: #1D1F34;
-  border-radius: 4px 0px 0px 4px;
-  color: white;
-  border: 1px solid #1D1F34;
-}
-.my-trips {
-  background: #FCFCFC;
-  border: 1px solid #1D1F34;
-  border-radius: 0px 4px 4px 0px;
-}
 .navbar-wrapper {
   display: flex;
   justify-content: space-between;
 }
-
-/* Upcoming and history slide */
-/* .trips-wrapper {
-  display: flex;
-  justify-content: center;
-}
-.up-hist {
-  padding: 10rpx 20rpx;
-  font-size: 25rpx;
-  margin-top: 20rpx;
- }
-.upcoming {
-  background: #1D1F34;
-  border-radius: 4px 0px 0px 4px;
-  color: white;
-  border: 1px solid #1D1F34;
-}
-.history {
-  background: #FCFCFC;
-  border: 1px solid #1D1F34;
-  border-radius: 0px 4px 4px 0px;
-} */
 
 /* Reviews section */
 .message {
@@ -85,9 +48,7 @@ margin: 20rpx 10rpx 0rpx 0rpx;
   border-radius: 3px; 
   margin: 10rpx;
 }
-.message:last-child {
-  border-bottom: none;
-}
+
 .avatar-large {
   border-radius: 50%;
   width: 40px;
@@ -110,21 +71,33 @@ margin: 20rpx 10rpx 0rpx 0rpx;
   font-size: 13px;
   color: rgba(0,0,0,0.7);
 }
+
 //MyPlanesTrips styling
-.statebar{
+.statebar {
   display: flex;
   justify-content: center;
   background: #fff;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
 }
-.statebar .item{
+.statebar .item { 
   position: relative;
   flex: auto;
   text-align: center;
   line-height: 80rpx;
+  background: #FCFCFC;
+  border: 1px solid #1D1F34;
+  font-size: 30rpx;
+  padding: 10rpx;
+  margin-top: 20rpx;
+  border-radius: 0px 4px 4px 0px;
 }
-.statebar .item.active{
+.statebar .item.active {
   background: #1D1F34;
   color: #fff;
+  border-radius: 4px 0px 0px 4px;
+  font-size: 30rpx;
+  padding: 10rpx;
 }
 .statebar .item.active:after{
   content: "";
@@ -137,28 +110,65 @@ margin: 20rpx 10rpx 0rpx 0rpx;
 }
 
 //UpcomingHistory styling
-.navbar{
+
+.navbar-wrapper {
   display: flex;
-  justify-content: center;
-  background: #fff;
+  align-self: center;
+  margin-left: 100px;
+  padding: 30px;
 }
-.navbar .item{
-  position: relative;
-  flex: auto;
-  text-align: center;
-  line-height: 80rpx;
+.navbar {
+ display: flex;
+ justify-content: center;
 }
+
 .navbar .item.active{
   background: #1D1F34;
-  color: #fff;
+  border-radius: 4px 0px 0px 4px;
+  color: white;
+  border: 1px solid #1D1F34;
+  padding: 10rpx;
+  font-size: 30rpx;
+}
+.navbar .item{
+  background: #FCFCFC;
+  border: 1px solid #1D1F34;
+  border-radius: 0px 4px 4px 0px;
+  padding: 10rpx;
+  font-size: 30rpx;
 }
 .navbar .item.active:after{
   content: "";
-  display: block;
-  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 4rpx;
 }
 
+.shootbar-wrapper {
+  display: flex;
+  align-self: center;
+  margin-left: 100px;
+  padding: 30px;
+}
+
+.shootbar .item{
+  line-height: 80rpx;
+  background: #FCFCFC;
+  border: 1px solid #1D1F34;
+  font-size: 30rpx;
+  padding: 10rpx;
+}
+.shootbar .item.active{
+  background: #1D1F34;
+  color: #fff;
+  font-size: 30rpx;
+  padding: 10rpx;
+}
+.shootbar .item.active:after{
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rpx;
+}

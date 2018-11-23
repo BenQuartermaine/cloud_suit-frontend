@@ -1,119 +1,118 @@
 <!--pages/account/account.wxml-->
 
-<!-- list and state operator functionality -->
+<!-- MyPlanes and MyTrips in Tab-Bar & List Button -->
 <view class='navbar-wrapper'>
   <view class='list-button'>
     <button bindtap="buttonLink">List</button>
   </view>
-</view>
-<!-- MyPlanes and MyTrips in Tab-Bar -->
-<view class="statebar">
-<text wx:for="{{statebar}}" data-idx="{{index}}" class="item {{currentState==index ? 'active' : ''}}" wx:key="unique" bindtap="stateTap">{{item}}</text>
+
+  <view class="statebar">
+    <text wx:for="{{statebar}}" data-idx="{{index}}" class="item {{currentState==index ? 'active' : ''}}" wx:key="unique" bindtap="stateTap">{{item}}</text>
+  </view>
 </view>
 
-
+<!-- Ｍyplane  -->
 <view hidden="{{currentState!==0}}">
+
+  <!-- Avatar & Nickname -->
   <view class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
 
-<!-- upcoming and history slider in Tab-Bar -->
-<view class="navbar">
-  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
-</view>
-
-<view hidden="{{currentTab!==0}}">
-  tab_01
-  <block wx:for="{{jets}}" wx:for-item="jet">
-   <view class="message">
-   <text> {{jet.model}}</text>
-   <block wx:for="{{jet.reservation_plane}}" wx:for-item="plane">
-    <text> {{plane.start_date}} to {{plane.end_date}}</text>
-    <text>Total: {{plane.total_price}}</text>
-   </block>
+  <view class='navbar'>
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
   </view>
-  </block>
+
+
+<!-- Card display — Upcoming tab when My Plane is active -->
+<view hidden="{{currentTab!==0}}">
+  <!-- <block wx:for="{{jet}}"> -->
+  <view class="message">
+    <block wx:for="{{jets}}" wx:for-item="jet">
+      <block wx:for="{{jet.reservation_plane}}" wx:for-item="plane">
+        <block wx:if="{{!plane.status}}">
+          <view class='body-wrapper'>
+            <view class="message-name">
+              <text class='name-date'>{{jet.model}}</text>
+              <text class='name-date'>{{plane.start_date}} to {{plane.end_date}}</text>
+            </view>
+          </view>
+        </block>
+      </block>
+    </block>
+  </view>
+  <!-- </block>  -->
 </view>
 
+<!-- Card display — History tab when my plane is highlighted -->
 <view hidden="{{currentTab!==1}}">
-  <!-- <block wx:if="{{jet}}">
- <block wx:for="{{jet}}">
+  <!-- <block wx:for="{{jet}}"> -->
   <view class="message">
-    <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/{{jet.name}}"></image>
+    <block wx:for="{{jets}}" wx:for-item="jet">
+      <block wx:for="{{jet.reservation_plane}}" wx:for-item="plane">
+        <block wx:if="{{plane.status}}">
+          <view class='body-wrapper'>
+            <view class="message-name">
+              <text class='name-date'>{{jet.model}}</text>
+              <text class='name-date'>{{plane.start_date}} to {{plane.end_date}}</text>
+            </view>
+          </view>
+        </block>
+        <block wx:else></block>
+      </block>
+    </block>
+  </view>
+  <!-- </block>  -->
+</view>
+</view>
+
+<!-- upcoming and history slider in Tab-Bar -->
+<view hidden="{{currentState!==1}}">
+  <!-- Avatar & Nickname -->
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+
+  <view class="shootbar">
+    <text wx:for="{{shootbar}}" data-idx="{{index}}" class="item {{currentShoot==index ? 'active' : ''}}" wx:key="unique" bindtap="shootTap">{{item}}</text>
+  </view>
+
+
+<!-- Upcoming tab when my trips is active -->
+<view hidden="{{currentShoot!==0}}">
+  <!-- <block wx:for="{{jet}}"> -->
+  
+    <block wx:for="{{reservation_trip}}" wx:for-item="trip">
+      <view class="message">
+        <block wx:if="{{!trip.status}}">
+          <view class='body-wrapper'>
+            <view class="message-name">
+              <text class='name-date'>{{trip.model}}</text>
+              <text class='name-date'>{{trip.start_date}} to {{trip.end_date}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+      <!-- <block wx:else></block> -->
+    </block> 
+</view>
+
+<!-- History tab when my trips is active -->
+<view hidden="{{currentShoot!==1}}">
+  <!-- <block wx:for="{{jet}}"> -->
+  <view class="message">
+    <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/benquartermaine"></image>
     <view class='body-wrapper'>
       <view class="message-name">
         <text class='name-date'>Gab Dehan | 2 months ago</text>
-        <view wx:if="{{reviews.content}}">{{reviews.content}}</view> 
-        <view wx:else>Sooo much CAVIAR.</view>
+        <view wx:if="{{reviews.content}}">{{reviews.content}}</view>
+        <view wx:else>1</view>
       </view>
     </view>
   </view>
- </block>
-</block>  -->
-
-<!-- <block wx:else="{{fakie}}">
- <block wx:for="{{fakie}}" wx:for-item="fake">
-  <view class="message">
-    <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/{{fake.name}}"></image>
-    <view class='body-wrapper'>
-      <view class="message-name">
-        <text class='name-date'>{{fake.name}} | 2 months ago</text>
-        <view wx:if="{{fake.description}}">{{fake.description}}</view> 
-        <view wx:else>Sooo much CAVIAR.</view>
-      </view>
-    </view>
-  </view>
- </block>
-</block> -->
-history🍹
-<block wx:for="{{jets}}" wx:for-item="jet">
-   <view class="message">
-   <text> {{jet.model}}</text>
-   <block wx:for="{{jet.reservation_plane}}" wx:for-item="plane">
-    <text> {{plane.start_date}} to {{plane.end_date}}</text>
-    <text>Total: {{plane.total_price}}</text>
-   </block>
-  </view>
-  </block>
-</view>
-</view>
-
-<view hidden="{{currentState!==1}}">
-
-<view class="userinfo">
-  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-</view>
-
-<!-- upcoming and history slider in Tab-Bar -->
-<view class="navbar">
-<text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
-</view>
-<view hidden="{{currentTab!==0}}">
-  tab_01
-  <block wx:for="{{reservation_trip}}" wx:for-item="trip">
-   <view class="message">
-   <text> {{trip.model}}</text>
-    <text> {{trip.start_date}} to {{trip.end_date}}</text>
-    <text>Total: {{trip.total_price}}</text>
-  </view>
-  </block>
-</view>
-
-<view hidden="{{currentTab!==1}}"> 
-tab_02
-  <block wx:for="{{reservation_trip}}" wx:for-item="trip">
-   <view class="message">
-   <text> {{trip.model}}</text>
-    <text> {{trip.start_date}} to {{trip.end_date}}</text>
-    <text>Total: {{trip.total_price}}</text>
-  </view>
-  </block>
+  <!-- </block>  -->
 </view>
 
 </view>
-
-
-  
-

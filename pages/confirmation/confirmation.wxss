@@ -11,6 +11,7 @@
 .image-wrapper image {
   height: 500rpx;
   border-radius: 5px;
+  width:100%;
 }
 
 .bold {

@@ -1,11 +1,17 @@
 <!--index.wxml-->
-<view class="background" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('/images/jet.jpg');">
+
+<view class='header'>
+  <view>Welcome to</view> 
+  <view class='bold'>CloudSuite</view>
+</view>
+
+<view class="background">
+  <!-- style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('/images/jet.jpg');" -->
   <view class="banner-content">
 
     <form bindSubmit='bindFormSubmit'>
 
       <view class='formcontainer'>
-
         <picker bindchange="bindFromPickerChange" value="{{start}}" range="{{location}}">
           <view>
             <view wx:if="{{!start}}">From</view>
@@ -33,8 +39,10 @@
             {{array[number_of_passengers]}}
           </view>
         </picker>
+        
         <view>
           <button class="searchbar" bindtap="clickSearch">Search</button>
+
         </view>
       </view>
     </form>
@@ -43,6 +51,7 @@
 
 <view class='card-wrap'>
   <view wx:for="{{jets}}" wx:for-item="jet" wx:key="jet.id" bindtap="showJet" data-jet="{{jet}}">
+
     <view class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{jet.photo}}');">
       <view class="card-category">{{jet.model}}</view>
     </view>
