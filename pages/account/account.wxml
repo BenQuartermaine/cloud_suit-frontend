@@ -11,7 +11,6 @@
   </view>
 </view>
 
-<!-- Ｍyplane  -->
 <view hidden="{{currentState!==0}}">
   <view class= 'userinfo' >
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
@@ -20,8 +19,11 @@
 
 
   <view class='navbar'>
-    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+    <view class='navbar-one'>
+      <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+    </view>
   </view>
+
 
 <!-- Card display — Upcoming tab when My Plane is active -->
 <view hidden="{{currentTab!==0}}">
@@ -61,7 +63,7 @@
       </block>
     </block>
  
-    <button class='review-button' bindtap="reviewLink">Write a Review</button>
+   
  
   </view>
  
@@ -104,8 +106,8 @@
 <!-- History tab when my trips is active -->
 <view hidden="{{currentShoot!==1}}">
 
-  <!-- <block wx:for="{{jet}}"> -->
-  <!-- <view class="message">
+  <block wx:for="{{jet}}">
+  <view class="message">
     <image class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/benquartermaine"></image>
     <view class='body-wrapper'>
       <view class="message-name">
@@ -115,28 +117,27 @@
       </view>
     </view>
   </view>
-  <!-- </block>  -->
-  <!-- <view class='list-button'>
+  </block> 
+<view class='list-button'>
     <button bindtap="reviewLink">Write a Review</button>
   </view>
-</view>  -->
+</view> 
 <view class="message">
-    <block wx:for="{{jets}}" wx:for-item="jet">
-      <block wx:for="{{jet.reservation_plane}}" wx:for-item="plane">
-        <block wx:if="{{plane.status}}">
+    <block wx:for="{{reservation_trip}}" wx:for-item="trip">
+      
+        <block wx:if="{{trip.status}}">
           <view class='body-wrapper'>
             <view class="message-name">
-              <text class='name-date'>{{jet.model}}</text>
-              <text class='name-date'>{{plane.start_date}} to {{plane.end_date}}</text>
+              <text class='name-date'>{{trip.model}}</text>
+              <text class='name-date'>{{trip.start_date}} to {{trip.end_date}}</text>
             </view>
           </view>
+          <button class='review-button' bindtap="reviewLink" data-res="{{trip.id}}">Write a Review</button>
+
         </block>
         <block wx:else></block>
-      </block>
+      
     </block>
-   
-    <button class='review-button' bindtap="reviewLink">Write a Review</button>
- 
-  </view>
+
   </view>
 </view>

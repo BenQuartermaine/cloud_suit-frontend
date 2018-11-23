@@ -54,6 +54,7 @@
 
     <view class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('{{jet.photo}}');">
       <view class="card-category">{{jet.model}}</view>
+      <image class="card-avatar" src="{{jet.avatarurl}}" mode="cover"></image>
     </view>
   </view>
 </view>

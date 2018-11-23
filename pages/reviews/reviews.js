@@ -21,6 +21,26 @@ Page({
       },
     })
   },
+
+  bindSubmit: function(e) {
+    console.log(e)
+    const content = e.detail.value.name
+    const data = {
+      content: content,
+      rating: this.data.reviews[this.data.index]
+    }
+
+    wx.request({
+      url: `https://cloud-suite.herokuapp.com/api/v1/reservations/${this.data.resid}/reviews`,
+      method:"POST",
+      data: data,
+      sucess(res) {
+        wx.switchTab({
+          url: '../account/account'
+        })
+      }
+    })
+  },
   
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -40,8 +60,29 @@ Page({
   onLoad: function (options) {
     const userInfo = wx.getStorageSync("userInfo");
     this.setData({
-      avatarUrl: userInfo.avatarUrl
-    });   
+
+      avatarUrl: userInfo.avatarUrl,
+      resid: options.id
+    });
+    console.log(options)
+
+
+
+    // in_xin: function(e) {
+    //   var in_xin = e.currentTarget.dataset.in;
+    //   var one_2;
+    //   if (in_xin === 'use_sc2') {
+    //     one_2 = Number(e.currentTarget.id);
+    //   } else {
+    //     one_2 = Number(e.currentTarget.id) + this.data.one_2;
+    //   }
+    //   this.setData({
+    //     one_2: one_2,
+    //     two_2: 5 - one_2
+    //   })
+    // };
+
+
   },
 
   /**
