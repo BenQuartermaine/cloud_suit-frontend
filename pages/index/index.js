@@ -8,6 +8,39 @@ Page({
 
   },
 
+  // bindFormSubmit: function(e) {
+  //   console.log(e)
+
+  //   const page = this
+
+  //   const passengers = this.number_of_passengers
+  //   const location = this.start
+  //   const date = this.start_date
+  // },
+  clickSearch: function(e) {
+    const that = this
+    console.log("hahah")
+      const passengers = this.data.number_of_passengers
+    
+      const location = this.data.location[this.data.start]
+   
+    
+      const date = this.data.start_date
+    console.log(`https://cloud-suite.herokuapp.com/api/v1/jets?passengers=${passengers}&location=${location}&start_date=${date}`)
+    
+    wx.request({
+      url: `https://cloud-suite.herokuapp.com/api/v1/jets?passengers=${passengers}&location=${location}&start_date=${date}`,
+      method: 'GET',
+      success(res) {
+        console.log(res)
+        const jets = res.data
+        that.setData(
+          jets
+        )
+      }
+    })
+  },
+
   onLoad: function (options) {
     let that = this;
     // when page loads, get the user id & info from local storage and save to page data
@@ -21,7 +54,7 @@ Page({
 
     // get all the jets information & save to page data
     wx.request({
-      url: 'https://cloud-suite.herokuapp.com/api/v1/jets',
+      url: `https://cloud-suite.herokuapp.com/api/v1/jets`,
       method: 'GET',
       success(res) {
         console.log(res)
@@ -32,18 +65,29 @@ Page({
       }
     })
   },
-
-  bindDatePickerChange: function (e) {
-    console.log('the chosen one!', e.detail.value)
+  bindFromPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      date: e.detail.value
+      start: e.detail.value
+    })
+  },
+  bindToPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      end: e.detail.value
+    })
+  },
+  bindDatePickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      start_date: e.detail.value
     })
   },
   
-  bindTimePickerChange: function (e) {
-    console.log('the chosen one!', e.detail.value)
+  bindPassengerPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      index: e.detail.value
+      number_of_passengers: e.detail.value
     })
   },
 
